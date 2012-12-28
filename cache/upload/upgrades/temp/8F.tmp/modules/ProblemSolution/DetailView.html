@@ -1,0 +1,109 @@
+<!--
+/*
+ */
+-->
+<!-- $Id: DetailView.html,v 1.22 2005/11/04 23:59:46 majed Exp $ -->
+<!-- BEGIN: main -->
+<script type="text/javascript">
+function prep_edit(the_form){
+ the_form.return_module.value   ='ProblemSolution';
+ the_form.return_action.value   ='DetailView';
+ the_form.return_id.value       ='{id}';
+ the_form.action.value          ='EditView';
+}
+
+function prep_duplicate(the_form){
+ the_form.return_module.value   ='ProblemSolution';
+ the_form.return_action.value   ='index';
+ the_form.isDuplicate.value     ='true';
+ the_form.action.value          ='EditView';
+}
+
+function prep_delete(the_form){
+ the_form.return_module.value   ='ProblemSolution';
+ the_form.return_action.value   ='ListView';
+ the_form.action.value          ='Delete';
+}
+function prep_associate(the_form){
+ the_form.module.value='Cases';
+ the_form.return_action.value='ListView';
+ the_form.return_id.value    ='{id}';
+ the_form.action.value       ='ListView';
+}
+</script>
+<form action="index.php" method="post" name="DetailView" id="form">
+ <table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+   <td style="padding-bottom: 2px;">
+    <input type="hidden" name="module" value="ProblemSolution" />
+    <input type="hidden" name="record" value="{id}" />
+    <input type="hidden" name="isDuplicate" value="false" />
+    <input type="hidden" name="action" />
+    <input type="hidden" name="return_module" value="{return_module}" />
+    <input type="hidden" name="return_action" value="{return_action}" />
+    <input type="hidden" name="return_id" value="{return_id}" />
+    <input type="submit" name="Edit" value="  {APP.LBL_EDIT_BUTTON}  "
+           title="{APP.LBL_EDIT_BUTTON_TITLE}" accessKey="{APP.LBL_EDIT_BUTTON_KEY}"
+           class="button" onclick="prep_edit(this.form);" />
+    <input type="submit" name="Duplicate" value="{APP.LBL_DUPLICATE_BUTTON}"
+           title="{APP.LBL_DUPLICATE_BUTTON_TITLE}" accessKey="{APP.LBL_DUPLICATE_BUTTON_KEY}"
+           class="button" onclick="prep_duplicate(this.form);" />
+    <input type="submit" name="Delete" value="  {APP.LBL_DELETE_BUTTON} "
+           title="{APP.LBL_DELETE_BUTTON_TITLE}" accessKey="{APP.LBL_DELETE_BUTTON_KEY}"
+           class="button"
+           onclick="prep_delete(this.form); return confirm('{APP.NTC_DELETE_CONFIRMATION}');"/>
+<!--
+<input title="{APP.LBL_ASSOCIATE_BUTTON_TITLE}"
+       accessKey="{APP.LBL_ASSOCIATE_BUTTON_KEY}" class="button" type="submit"
+       name="Associate" value="  Associate to Case "
+       onclick="prep_associate(this.form); return confirm('{APP.NTC_ASSOCIATE_CONFIRMATION}');"
+/>
+-->
+   </td>
+   <td align='right'>{ADMIN_EDIT}</td>
+  </tr>
+ </table>
+</form>
+
+<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0"
+       class="tabDetailView">
+ {PAGINATION}
+ <tr>
+  <td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_NAME}</slot></td>
+  <td width="35%" class="tabDetailViewDF"><slot>{name}</slot></td>
+  <td class="tabDetailViewDL"><slot>{MOD.LBL_ASSIGNED_USER_ID}</slot></td>
+  <td class="tabDetailViewDF"><slot>{assigned_user_name}</slot></td>
+ </tr>
+ <tr>
+  <td class="tabDetailViewDL"><slot>{MOD.LBL_STATUS}</slot></td>
+  <td class="tabDetailViewDF"><slot>{status}</slot></td>
+  <td class="tabDetailViewDL"><slot>{MOD.LBL_PARENT_ID}</slot></td>
+  <td class="tabDetailViewDF"><slot><{TAG.PARENT}
+      href="index.php?module=Problem&action=DetailView&record={parent_id}"
+      class="tabDetailViewDFLink">{parent_name}</{TAG.PARENT}></slot></td>
+<!-- BEGIN: open_source -->
+<!-- END: open_source -->
+ </tr>
+ <tr>
+  <td class="tabDetailViewDL"><slot>{MOD.LBL_SOLUTION_NUMBER}</slot></td>
+  <td class="tabDetailViewDF"><slot>{solution_number}</slot></td>
+  <td class="tabDetailViewDL"><slot>{MOD.LBL_DEPENDS_ON_ID}</slot></td>
+  <td class="tabDetailViewDF"><slot><{TAG.PARENT_SOLUTION}
+      href="index.php?module=ProblemSolution&action=DetailView&record={depends_on_id}"
+      class="tabDetailViewDFLink">{depends_on_name}</{TAG.PARENT_SOLUTION}></slot></td>
+ </tr>
+ <tr>
+  <td class="tabDetailViewDL"><slot>{MOD.LBL_ORDER_NUMBER}</slot></td>
+  <td class="tabDetailViewDF"><slot>{order_number}</slot></td>
+  <td class="tabDetailViewDL"><slot>&nbsp;</slot></td>
+  <td class="tabDetailViewDF"><slot>&nbsp;</slot></td>
+ </tr>
+ <tr>
+  <td class="tabDetailViewDL"><slot>{MOD.LBL_DESCRIPTION}</slot></td>
+  <td class="tabDetailViewDF" colspan="3"><slot>{description}</slot></td>
+ </tr>
+</table>
+<!-- END: main -->
+<!-- BEGIN: subpanel -->
+<slot>{SUBPANEL}</slot>
+<!-- END: subpanel -->

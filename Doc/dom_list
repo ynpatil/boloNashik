@@ -1,0 +1,18 @@
+'gender_dom' =>
+  array (
+    '' => '',
+    'male' => 'Male',
+    'female' => 'Female',
+    ),
+    'level_dom' =>
+  array (
+    '' => '',
+    'chief' => 'Chief Officer - CEO, CMO, COO, CIO, President',
+    'fresher' => 'Entry Level/Fresher',
+    'junior' => 'Junior - Executive, Assistant',    
+    'middle' => 'Middle - Manager, Assistant Manager',
+    'other' => 'Others',
+    'pt' => 'Part time',
+    'senior' => 'Senior -Sr. Manager, General Manager',
+    'top' => 'Top - Directors, VP',
+    ),

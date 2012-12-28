@@ -1,0 +1,161 @@
+<!--
+/*********************************************************************************
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004-2006 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ ********************************************************************************/
+-->
+<!-- $Id: EditView.html,v 1.64 2006/08/29 04:37:45 majed Exp $ -->
+<!-- BEGIN: main -->
+<script type="text/javascript" src="include/javascript/popup_parent_helper.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script type='text/javascript' src='include/javascript/yui/connection.js'></script>
+{SITEURL}
+{TREEHEADER}
+{SET_RETURN_JS}
+<script>
+function select_node(treeid) {
+	var node=YAHOO.namespace(treeid).selectednode;
+	if(node.isRoot())
+	{
+		alert("You have made a invalid selection");
+		return;
+	}
+//	alert("Node :"+node.getAncestor(1));
+	document.getElementById("prod_hier_id").value = node.data.id;
+	document.getElementById("prod_hier_desc").value = getFullDesc(node);
+		
+	//send_back('Brands',node.data.id);
+}
+
+function getFullDesc(node)
+{
+	var desc = "";
+	var parentNode = node;
+	var firstPass = true;
+	while(true)
+	{
+		if(parentNode.data.id == "root")
+		break;
+		desc = parentNode.data.label +(firstPass?"":"=>")+desc;
+		parentNode = parentNode.parent;
+		firstPass = false;
+	}
+	return desc;	
+}
+</script>
+<p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+	<td align="left" style="padding-bottom: 2px;">
+			<form name="EditView" method="POST" action="index.php">
+			<input type="hidden" name="module" value="Brands">
+			<input type="hidden" name="record" value="{ID}">
+			<input type="hidden" name="action">
+			<input type="hidden" name="case_id" value="{CASE_ID}">
+			<input type="hidden" name="bug_id" value="{BUG_ID}">
+			<input type="hidden" name="email_id" value="{EMAIL_ID}">
+			<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+			<input type="hidden" name="return_id" value="{RETURN_ID}">
+			<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+			<input type="hidden" id="prod_hier_id" name="prod_hier_id" value="{PROD_HIER_ID}">
+		<input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="this.form.action.value='Save';return check_form('EditView')" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " >
+		<input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  "></td>
+
+	<td align="right" nowrap><span class="required">{APP.LBL_REQUIRED_SYMBOL}</span> {APP.NTC_REQUIRED}</td>
+	<td align="right">{ADMIN_EDIT}</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  class="tabForm">
+<tr>
+<td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr><th align="left" class="dataField" colspan="4"><h4 class="dataLabel">{MOD.LBL_BRAND_INFORMATION}</h4></th></tr>
+	<tr>
+	<td width="15%" valign="top" class="dataLabel"><span sugar='slot1'>{MOD.LBL_VARIANT_BRAND_NAME} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></span sugar='slot'></td>
+	<td width="35%" valign="top"  class="dataField"><span sugar='slot1b'><input name='name' tabindex='1' size='35' maxlength='150' type="text" value="{NAME}"></span sugar='slot'></td>
+        
+	</tr>
+        <tr>
+	<td width="15%" valign="top" class="dataLabel"><span sugar='slot1'>{MOD.LBL_PRICE} </span sugar='slot'></td>
+	<td width="35%" valign="top"  class="dataField"><span sugar='slot1b'><input name='price' tabindex='1' size='15' maxlength='150' type="text" value="{PRICE}"></span sugar='slot'></td>
+	</tr>
+        <tr>
+	<td valign="top" class="dataLabel"><span sugar='slot7'>{MOD.LBL_PRIMARY_BRAND}</span sugar='slot'></td>
+	<td  valign="top"  class="dataField"><span sugar='slot7b'><input class="sqsEnabled" tabindex="1" autocomplete="off" id="parent_name" name='parent_name' type="text" value="{PARENT_NAME}"><input id='parent_id' name='parent_id' type="hidden" value="{PARENT_ID}" />
+		<input title="{APP.LBL_SELECT_BUTTON_TITLE}" accessKey="{APP.LBL_SELECT_BUTTON_KEY}" type="button" tabindex='1' class="button" value='{APP.LBL_SELECT_BUTTON_LABEL}' name=btn1
+			onclick='open_popup("Brands", 600, 400, "", true, false, {encoded_brands_popup_request_data},"single",true);' /></span sugar='slot'></td>
+	</tr>
+	<tr>
+
+	<td valign="top" class="dataLabel"><span sugar='slot7'>{MOD.LBL_PRIMARY_ACCOUNT} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></span sugar='slot'></td>
+	<td  valign="top"  class="dataField"><span sugar='slot7b'><input class="sqsEnabled" tabindex="1" autocomplete="off" id="account_name" name='account_name' type="text" value="{ACCOUNT_NAME}"><input id='account_id' name='account_id' type="hidden" value="{ACCOUNT_ID}" />
+		<input title="{APP.LBL_SELECT_BUTTON_TITLE}" accessKey="{APP.LBL_SELECT_BUTTON_KEY}" type="button" tabindex='1' class="button" value='{APP.LBL_SELECT_BUTTON_LABEL}' name=btn1
+			onclick='open_popup("Accounts", 600, 400, "", true, false, {encoded_accounts_popup_request_data},"single",true);' /></span sugar='slot'></td>
+	</tr>
+
+	<!-- BEGIN: open_source -->
+	<!-- END: open_source -->
+	</table>
+</td></tr></table>
+</p>
+<!--
+<p>
+    
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabForm">
+<tr><td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th align="left" class="dataLabel" colspan="2" class="dataLabel"><h4 class="dataLabel">{MOD.LBL_BRAND_POSITIONING}</h4></th>
+	</tr>
+	<tr>
+		<td width="15%" valign="top" colspan="2" class="dataLabel"><span sugar='slot31'>{MOD.LBL_DESCRIPTION}</span sugar='slot'></td>
+	</tr>
+	</table>
+</td></tr></table>
+</p>
+<p>
+<!--<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabForm">
+<tr><td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	<th align="left" class="dataLabel" colspan="2" class="dataLabel"><h4 class="dataLabel">{MOD.LBL_PROD_HIER}</h4></th>
+	</tr><tr>
+	<td width="100%" colspan="2" valign="top" class="dataLabel">
+		<table cellpadding="0" cellspacing="0" style="border-left:1px solid; border-right:1px solid; border-bottom:1px solid" width="100%" class="tabForm">
+		<tr>
+			<td width="85%" class="dataField"><span sugar='slot31b'><textarea name='prod_hier_desc' tabindex='5' cols="60" rows="5" readonly>{PROD_HIER_DESC}</textarea></span sugar='slot'></td>
+		</tr>
+		<tr>
+			<td width="100%" valign="top" style="border-right: 1px">
+				<div id="prod_hier">
+					{TREEINSTANCE}
+				</div>
+			</td>
+		</tr>
+	</table>
+	</td>	
+</tr></table>
+</td></tr>
+</table>-->
+</p>
+<input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="this.form.action.value='Save';return check_form('EditView')" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " >
+<input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+</form>
+
+{JAVASCRIPT}
+<!-- END: main -->

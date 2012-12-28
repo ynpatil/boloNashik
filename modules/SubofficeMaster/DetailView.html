@@ -1,0 +1,156 @@
+<!--
+/*
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004-2006 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ */
+-->
+<!-- $Id: DetailView.html,v 1.31 2006/08/27 10:33:09 majed Exp $ -->
+<!-- BEGIN: main -->
+
+
+
+<form action="index.php" method="post"
+      name="DetailView" id="DetailView">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td style="padding-bottom: 2px;">
+                <input type="hidden" name="module" value="SubofficeMaster" />
+                <input type="hidden" name="record" value="{id}" />
+                <input type="hidden" name="isDuplicate" value="false" />
+                <input type="hidden" name="action" />
+                <input type="hidden" name="return_module" value="SubofficeMaster" />
+                <input type="hidden" name="return_action" value="DetailView" />
+                <input type="hidden" name="return_id" value="{id}" />
+                <input type="hidden" name="address_branch" id="address_branch" value="{name}  {ADDRESS_BRANCH}">
+
+                <input title="{APP.LBL_EDIT_BUTTON_TITLE}" accessKey="{APP.LBL_EDIT_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='SubofficeMaster'; this.form.return_action.value='DetailView'; this.form.return_id.value='{ID}'; this.form.action.value='EditView'" type="submit" name="Edit" value="  {APP.LBL_EDIT_BUTTON_LABEL}  ">
+                <input title="{APP.LBL_DUPLICATE_BUTTON_TITLE}" accessKey="{APP.LBL_DUPLICATE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='SubofficeMaster'; this.form.return_action.value='index'; this.form.isDuplicate.value=true; this.form.action.value='EditView'" type="submit" name="Duplicate" value=" {APP.LBL_DUPLICATE_BUTTON_LABEL} ">
+                <input title="{APP.LBL_DELETE_BUTTON_TITLE}" accessKey="{APP.LBL_DELETE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='SubofficeMaster'; this.form.return_action.value='ListView'; this.form.action.value='Delete'; return confirm('{APP.NTC_DELETE_CONFIRMATION}')" type="submit" name="Delete" value=" {APP.LBL_DELETE_BUTTON_LABEL} ">
+		{FIND_DUPES_MERGE_BUTTON}
+            </td>
+
+            <td align='right'>{ADMIN_EDIT}</td>
+        </tr>
+
+    </table>
+
+
+    <table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0"
+           class="tabDetailView">
+        {PAGINATION}
+        <tr>
+            <td width="15%" class="tabDetailViewDL"><span sugar='slot1'>{MOD.LBL_NAME}</span sugar='slot'></td>
+            <td width="35%" class="tabDetailViewDF"><span sugar='slot1b'>{name}&nbsp;</span sugar='slot'></td>
+
+            <!-- BEGIN: open_source -->
+            <td width="20%" class="tabDetailViewDL"><span sugar='slot3'>&nbsp;</span sugar='slot'></td>
+            <td width="30%" class="tabDetailViewDF"><span sugar='slot3b'>&nbsp;</span sugar='slot'></td>
+            <!-- END: open_source -->
+        </tr>
+        <tr>
+            <td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_BRANCH_NAME}</slot></td>
+            <td width="35%" class="tabDetailViewDF"><slot><a href="index.php?module=BranchMaster&action=DetailView&record={branch_id_c}">{BRANCH_ID_C_NAME}</a>&nbsp;</slot></td>
+            <td width="20%" class="tabDetailViewDL"><slot>&nbsp;</slot></td>
+            <td width="30%" class="tabDetailViewDF"><slot>&nbsp;</slot></td>
+        </tr>
+        <tr>
+            <td  width="15%" class="tabDetailViewDL"><span sugar='slot3'>{MOD.LBL_OFFICE_DETAIL}</span sugar='slot'></td>
+            <td width="35%" class="tabDetailViewDF"><span sugar='slot3b'>{OFFICE_DETAIL}</span sugar='slot'></td>
+            <td width="20%" class="tabDetailViewDL"><span sugar='slot4'>&nbsp;</span sugar='slot'></td>
+            <td width="30%" class="tabDetailViewDF" colspan="3"><span sugar='slot4b'> </span sugar='slot'></td>
+        </tr>
+        <tr>
+            <td width="20%" class="tabDetailViewDL"><slot>{MOD.LBL_PIN_CODE}</slot></td>
+            <td width="30%" class="tabDetailViewDF"><slot>{PIN_CODE}</slot></td>
+            <td width="20%" class="tabDetailViewDL"><slot></slot></td>
+            <td width="30%" class="tabDetailViewDF" colspan="3"><slot></slot></td>
+        </tr>
+        <tr>
+            <td width="20%" class="tabDetailViewDL"><slot>{MOD.LBL_PHONE}</slot></td>
+            <td width="30%" class="tabDetailViewDF"><slot>{PHONE_NO}</slot></td>
+            <td width="20%" class="tabDetailViewDL"><slot>{MOD.LBL_FAX}</slot></td>
+            <td width="30%" class="tabDetailViewDF" colspan="3"><slot>{FAX_NO}</slot></td>
+        </tr>
+        <tr>
+            <td width="20%" class="tabDetailViewDL"><slot>{MOD.LBL_LATITUDE}</slot></td>
+            <td width="30%" class="tabDetailViewDF"><slot>{LATITUDE}<input size="20" type="hidden" id="latitude" name="latitude" value="{LATITUDE}" ></slot></td>
+            <td width="20%" class="tabDetailViewDL"><slot>{MOD.LBL_LOGITUDE}</slot></td>
+            <td width="30%" class="tabDetailViewDF" colspan="3"><slot>{LONGITUDE}<input size="20" type="hidden" id="longitude" name="longitude" value="{LONGITUDE}" ></slot></td>
+            
+        </tr>
+        <tr>
+            <td  width="15%" class="tabDetailViewDL"><slot>{APP.LBL_DATE_MODIFIED}</slot></td>
+            <td width="35%" class="tabDetailViewDF"><slot>{DATE_MODIFIED} {APP.LBL_BY} {MODIFIED_BY}</slot></td>
+            <td width="15%" class="tabDetailViewDL"><slot>{APP.LBL_DATE_ENTERED}</slot></td>
+            <td width="35%" class="tabDetailViewDF" colspan="3"><slot>{DATE_ENTERED} {APP.LBL_BY} {CREATED_BY}</slot></td>
+        </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td style="padding-top:10px;padding-bottom:10px;">
+
+                <input title="{MOD.LBL_SAVE_LAT_LONG_BUTTON_TITLE}" accessKey="{MOD.LBL_SAVE_LAT_LONG_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='SubofficeMaster'; this.form.return_action.value='DetailView'; this.form.return_id.value='{ID}'; this.form.action.value='SaveMapLocation'" type="submit" name="Edit" value="  {MOD.LBL_SAVE_LAT_LONG_BUTTON_LABEL}  ">
+                <b>Note:</b> Right click on a <font color="blue"><strong>blue marker</strong></font> to remove it.
+
+                <!--<input type="button" value="Clear/Reset All Markers" id="reset" onclick="reset()">
+                <input type="button" value="Center Red Marker" id="reset1" onclick="reset1()">-->
+
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key={GMAP_KEY}" type="text/javascript"></script>
+
+<script type="text/javascript" src="google/google_map.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<link href="google/google_map.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+    function assignValues(){
+        if(document.getElementById('latitude').value){
+            showLatLong(document.getElementById('latitude').value, document.getElementById('longitude').value);
+        }
+        else{
+            showAddress(document.getElementById('address_branch').value);
+        }
+    }
+</script>
+<!--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key={GMAP_KEY}" type="text/javascript"></script>-->
+<div id="o">
+
+    <div id="content">
+        <table cellpadding="4" cellspacing="0" border="0" width="100%">
+            <tr valign="top">
+                <td class="cs" width="100%">
+
+                    <div id="wrapper" ><div id="map" style="width: 1000px; height: 450px"></div></div>
+                    <center><input type="button" value="Clear/Reset All Markers" id="reset" onclick="reset()">&nbsp;&nbsp;<input type="button" value="Center Red Marker" id="reset1" onclick="reset1()"></center>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    xz();
+    assignValues();
+</script>
+
+<!-- END: main -->

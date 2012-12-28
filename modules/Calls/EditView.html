@@ -1,0 +1,239 @@
+<!--
+/*********************************************************************************
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004-2006 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ ********************************************************************************/
+/*********************************************************************************
+
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+<script type="text/javascript" src="include/javascript/popup_parent_helper.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script text="javascript">
+    function check_status(){
+        
+        var status_id = document.getElementById('status');     
+        var not_interested_div = document.getElementById('not_interested_div');   
+        var call_back_div = document.getElementById('call_back_div');   
+        //alert("hello");
+        //if condition used for not_interested option to show
+        // suboptions
+        if(status_id.value == "not_interested"){        
+            not_interested_div.style.display = "block";            
+        }else{           
+            not_interested_div.style.display = "none";            
+        }            
+        if(status_id.value == "call_back"){           
+            call_back_div.style.display = "block";
+        }else{
+            call_back_div.style.display = "none";
+        }
+    }
+    
+</script>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <form name="EditView" method="POST" action="index.php">
+        <input type="hidden" name="module" value="Calls">
+        <input type="hidden" name="record" value="{ID}">
+        <input type="hidden" name="isDuplicate" value=false>
+        <input type="hidden" name="isSaveAndNew" value=false>			
+        <input type="hidden" name="action">
+        <input type="hidden" name="send_invites" value="">
+        <input type="hidden" name="user_invitees" value="">
+        <input type="hidden" name="contact_invitees" value="">
+        <input type="hidden" name="contact_id" value="{CONTACT_ID}">
+        <input type="hidden" name="return_module" value="{RETURN_MODULE}">
+        <input type="hidden" name="return_id" value="{RETURN_ID}">
+        <input type="hidden" name="return_action" value="{RETURN_ACTION}">
+        <input type="hidden" name="isassoc_activity" value="{isassoc_activity}" />
+        <input type="hidden" name="followup_for_id" value="{followup_for_id}" />	
+        <input type="hidden" name="source_info" value="{SOURCE_INFO}">
+        <input type="hidden" name="source_info_id" value="{SOURCE_INFO_ID}">
+        <td style="padding-bottom: 2px;">
+            <input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="fill_invitees();this.form.action.value='Save';return check_form('EditView');" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " > 
+            <input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+<!--<input title="{MOD.LBL_SEND_BUTTON_TITLE}" accessKey="{MOD.LBL_SEND_BUTTON_KEY}" class="button" onclick="this.form.send_invites.value='1';fill_invitees();this.form.action.value='Save';this.form.return_action.value='EditView';this.form.return_module.value='{RETURN_MODULE}';return check_form('EditView');" type="submit" name="button" value="  {MOD.LBL_SEND_BUTTON_LABEL}  " >
+            <input title="{APP.LBL_CLOSE_AND_CREATE_BUTTON_TITLE}" accessKey="{APP.LBL_CLOSE_AND_CREATE_BUTTON_KEY}" class="button" 
+                   onclick="this.form.status.value='Held';this.form.action.value='Save';
+                       this.form.return_module.value='Calls';this.form.isDuplicate.value=true;
+                       this.form.isSaveAndNew.value=true;this.form.return_action.value='EditView'; 
+                       this.form.isDuplicate.value=true;this.form.return_id.value='{ID}';
+                   " type="submit" name="button" value="  {APP.LBL_CLOSE_AND_CREATE_BUTTON_LABEL}  " >-->
+        </td>
+        <td align="right" nowrap><span class="required">{APP.LBL_REQUIRED_SYMBOL}</span>  {APP.NTC_REQUIRED}</td>
+        <td align="right">{EDIT_ADMIN}</td>
+        </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabForm">
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+                <tr>
+                    <td class="dataLabel"><span sugar='slot1'>{MOD.LBL_TOKEN}</span sugar='slot'></td>
+                    <td class="dataField"><span sugar='slot1b'><b>{TOKEN_NO}</b>&nbsp;</span sugar='slot'></td>
+                    <td class="dataLabel"><span sugar='slot11'></span sugar='slot'></td>
+                    <td class="dataField"><span sugar='slot11b'></span sugar='slot'></td>
+                </tr>
+                <tr>
+                    <td width="15%" class="dataLabel"><span sugar='slot1'>{MOD.LBL_SUBJECT} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></span sugar='slot'></td>
+                    <td width="35%" class="dataField"><span sugar='slot1b'><input name='name' tabindex='1' size='35' maxlength='50' type="text" value="{NAME}"></span sugar='slot'></td>
+                    <td width="20%" class="dataLabel"><span sugar='slot2'>{APP.LBL_ASSIGNED_TO}</span sugar='slot'></td>
+                    <td width="30%" class="dataField"><span sugar='slot2b'><input class="sqsEnabled" tabindex="1" autocomplete="off" id="assigned_user_name" name='assigned_user_name' type="text" value="{ASSIGNED_USER_NAME}"><input id='assigned_user_id' name='assigned_user_id' type="hidden" value="{ASSIGNED_USER_ID}" />
+                            <input title="{APP.LBL_SELECT_BUTTON_TITLE}" accessKey="{APP.LBL_SELECT_BUTTON_KEY}" type="button" tabindex='1' class="button" value='{APP.LBL_SELECT_BUTTON_LABEL}' name=btn1
+                                   onclick='open_popup("Users", 600, 400, "", true, false, {encoded_users_popup_request_data});' /></span sugar='slot'></td>
+                </tr>
+                <tr valign="top">
+                    <td class="dataLabel"  valign="top"><span sugar='slot3'>{MOD.LBL_DATE_TIME} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></span sugar='slot'></td>
+                    <td class="dataField"><span sugar='slot3b'><table  cellpadding="0" cellspacing="0"><tr><td nowrap><input name='date_start' id='jscal_field' onblur="parseDate(this, '{CALENDAR_DATEFORMAT}'); SugarWidgetScheduler.update_time();" tabindex='1' size='11' maxlength='10' type="text" value="{DATE_START}"> <img src="themes/{THEME}/images/jscalendar.gif" alt="{CALENDAR_DATEFORMAT}"  id="jscal_trigger" align="absmiddle">&nbsp;</td>
+                                    <td nowrap><select onchange="SugarWidgetScheduler.update_time();" name='time_hour_start' tabindex="1">{TIME_START_HOUR_OPTIONS}</select>{TIME_SEPARATOR}<select onchange="SugarWidgetScheduler.update_time();" name='time_minute_start' tabindex="1">{TIME_START_MINUTE_OPTIONS}</select>{TIME_MERIDIEM}</td></tr><tr><td nowrap><span class="dateFormat">{USER_DATEFORMAT}</span></td><td nowrap><span class="dateFormat">{TIME_FORMAT}</span></td></tr></table></span sugar='slot'></td>
+
+                    <!-- BEGIN: open_source -->
+                    <td class="dataLabel"><span sugar='slot5'>{MOD.LBL_ASSIGNED_VENDOR}</span sugar='slot'></td>
+                    <td class="dataField"><span sugar='slot5b'><select title='{ASSIGNED_TEAM_ID_C_HELP}' name="assigned_team_id_c">{OPTIONS_ASSIGNED_TEAM_ID_C}</select></span sugar='slot'></td>
+                    <!-- END: open_source -->
+                </tr>
+                <tr>
+                    <td class="dataLabel"><span sugar='slot6'>{MOD.LBL_STATUS} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></span sugar='slot'></td>
+                    <td class="dataField" valign="top"><span sugar='slot6b'><select tabindex="2" name='direction'>{DIRECTION_OPTIONS}</select> <select tabindex="2" id="status" onchange="return check_status();" name='status'>{STATUS_OPTIONS}</select></span></td>
+                    <td valign="top" nowrap>
+                        <div id="not_interested_div" style="display: none" >
+                            <select id="not_interested" name="not_interested">{NOT_INTERESTED_OPTIONS}</select>
+                        </div>
+                    </td>	
+
+                </tr>
+                <tr>
+                    <td colspan="4"> 
+                        <div id="call_back_div" style="display: none" >
+                            <table width="50%" border="0">
+                                <tr>
+                                    <td  width="14%" class="dataLabel">{MOD.LBL_CALL_BACK}</td>
+                                    <td valign="top" width="35%" class="dataField" ><input name='call_back_date' id='call_back_jscal_field' onblur="parseDate(this, '{CALENDAR_DATEFORMAT}'); SugarWidgetScheduler.update_time();" tabindex='1' size='11' maxlength='10' type="text" value="{CALL_BACK_DATE}"> <img src="themes/{THEME}/images/jscalendar.gif" alt="{CALENDAR_DATEFORMAT}"  id="call_back_jscal_trigger" align="absmiddle">
+                                        <select onchange="SugarWidgetScheduler.update_time();" name='call_back_time_hour' tabindex="1">{CALL_BACK_TIME_HOUR_OPTIONS}</select>{TIME_SEPARATOR}<select onchange="SugarWidgetScheduler.update_time();" name='call_back_time_minute' tabindex="1">{CALL_BACK_TIME_MINUTE_OPTIONS}</select>{TIME_MERIDIEM_SEC}
+                                        <br>{USER_DATEFORMAT} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TIME_FORMAT}</td>
+                                </tr>                                
+                            </table>
+                        </div>
+                    </td>
+                </tr>               
+                <tr>
+                    <td class="dataLabel" valign="top"><span sugar='slot7'>{MOD.LBL_DURATION} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></span sugar='slot'></td>
+                    <td valign="top" class="dataField"><span sugar='slot7b'><input name='duration_hours' tabindex='1' size='2' maxlength='2' type="text" value='{DURATION_HOURS}' onblur="SugarWidgetScheduler.update_time();"/> <select onchange="SugarWidgetScheduler.update_time();" tabindex='1' name='duration_minutes'>{DURATION_MINUTES_OPTIONS}</select> &nbsp;<span class="dateFormat">{MOD.LBL_HOURS_MINUTES}</span></span sugar='slot'></td>
+                    <td class="dataLabel" valign="top"><span sugar='slot8'><select name='parent_type' tabindex='2' onChange="document.EditView.parent_name.value='';changeQS(); checkParentType(document.EditView.parent_type.value, document.EditView.change_parent);">{TYPE_OPTIONS}</select></span sugar='slot'></td>
+                    <td class="dataField"><span sugar='slot8b'><input id='parent_id' name='parent_id' type="hidden" value='{PARENT_ID}'><input class="sqsEnabled" tabindex="2" autocomplete="off" tabindex='0' id="parent_name" name='parent_name' type="text" value="{PARENT_NAME}">{CHANGE_PARENT_BUTTON}</span sugar='slot'></td>
+                </tr>
+                <tr>
+                    <td class="dataLabel" valign="top"><span sugar='slot9'>{MOD.LBL_REMINDER}</span sugar='slot'></td>
+                    <td valign="top" class="dataField" nowrap><span sugar='slot9b'><input name='should_remind' type='hidden' value='0'><input name='should_remind' tabindex='1' size='2' maxlength='2' onclick='toggleDisplay("should_remind_list");' type="checkbox" class="checkbox" value='1' {REMINDER_CHECKED}> <div id='should_remind_list' style='display:{REMINDER_TIME_DISPLAY}'><select name='reminder_time' tabindex='1' >{REMINDER_TIME_OPTIONS}</select></div></span sugar='slot'></td>
+                    <td class="dataField"><span sugar='slot10'>{MOD.LBL_ACTIVITY_FOR_CAMPAIGN} </span sugar='slot'></td>
+                    <td class="dataField"><span sugar='slot10b'>
+                            <input id='campaign_id' name='campaign_id' type="hidden" value='{CAMPAIGN_ID}'><input class="sqsEnabled" tabindex="2" autocomplete="off" id="campaign_name" name='campaign_name' tabindex='0' type='hidden' value="{CAMPAIGN_NAME}" readonly="true">{CAMPAIGN_NAME}
+                            <!--<input title="{APP.LBL_SELECT_BUTTON_TITLE}" accessKey="{APP.LBL_SELECT_BUTTON_KEY}" type="button" tabindex='2' class="button" value='{APP.LBL_SELECT_BUTTON_LABEL}' name=btn1 disabled="true" 
+                                   onclick='open_popup("Campaigns", 600, 400, "", true, false, {encoded_campaign_popup_request_data});' />-->
+                        </span sugar='slot'></td>
+                </tr><tr>
+                    <td valign="top" class="dataLabel"><span sugar='slot11'>{MOD.LBL_DESCRIPTION}</span sugar='slot'></td>
+                    <td class="dataField"><span sugar='slot11b'><textarea tabindex='3' name='description' cols="40" rows="6">{DESCRIPTION}</textarea></span sugar='slot'></td>
+                    <td valign="top" class="dataLabel"><span sugar='slot12'>{APP.LBL_OUTCOME}</span sugar='slot'></td>
+                    <td class="dataField"><span sugar='slot12b'><textarea tabindex='3' name='outcome' cols="40" rows="6">{OUTCOME}</textarea></span sugar='slot'></td>
+                </tr>
+            </table>
+        </td></tr></table>
+<div style="padding-top: 2px">
+    <input title="{APP.LBL_SAVE_BUTTON_TITLE}" class="button" onclick="fill_invitees();this.form.action.value='Save';return check_form('EditView');" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " > 
+    <input title="{APP.LBL_CANCEL_BUTTON_TITLE}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  "> 
+<!--<input title="{MOD.LBL_SEND_BUTTON_TITLE}" class="button" onclick="this.form.send_invites.value='1';fill_invitees();this.form.action.value='Save';this.form.return_action.value='EditView';this.form.return_module.value='{RETURN_MODULE}';return check_form('EditView');" type="submit" name="button" value="  {MOD.LBL_SEND_BUTTON_LABEL}  " >
+    <input title="{APP.LBL_CLOSE_AND_CREATE_BUTTON_TITLE}" accessKey="{APP.LBL_CLOSE_AND_CREATE_BUTTON_KEY}" class="button" 
+           onclick="this.form.status.value='Held';this.form.action.value='Save';
+               this.form.return_module.value='Calls';this.form.isDuplicate.value=true;
+               this.form.isSaveAndNew.value=true;this.form.return_action.value='EditView'; 
+               this.form.isDuplicate.value=true;this.form.return_id.value='{ID}';
+           " type="submit" name="button" value="  {APP.LBL_CLOSE_AND_CREATE_BUTTON_LABEL}  " >-->
+
+</div>
+
+<!-- BEGIN: campaign_data --> 
+<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0" >
+<!-- BEGIN: Header -->     
+<tr><td class="tabDetailViewDF" valign="top" colspan="5" >&nbsp;</td></tr>
+<tr>
+    <td class="listViewThS1"><span sugar='slot16'>{MOD.LBL_LIST_CAMPAIGN}</span sugar='slot'></td>
+    <td class="listViewThS1"><span sugar='slot17'>{MOD.LBL_LIST_STATUS}</span sugar='slot'></td>
+    <td class="listViewThS1"><span sugar='slot17'>{MOD.LBL_BRANDS_SUBPANEL_TITLE}</span sugar='slot'></td>
+    <td class="listViewThS1"><span sugar='slot17'>{MOD.LBL_LIST_DATE}</span sugar='slot'></td>
+    <td class="listViewThS1"><span sugar='slot17'>{MOD.LBL_LIST_END_DATE}</span sugar='slot'></td>
+</tr>
+<!-- END: Header --> 
+<!-- BEGIN: row --> 
+<tr>
+    <td class="tabDetailViewDF"><span sugar='slot16b'>{CAMPAIGN_NAME}</span sugar='slot'></td>                
+    <td class="tabDetailViewDF"><span sugar='slot17b'>{CAMPAIGN_STATUS}&nbsp;</span sugar='slot'></td>
+    <td class="tabDetailViewDF"><span sugar='slot17b'>{PRODUCT}&nbsp</span sugar='slot'></td>
+    <td class="tabDetailViewDF"><span sugar='slot17b'>{START_DATE}&nbsp</span sugar='slot'></td>
+    <td class="tabDetailViewDF"><span sugar='slot17b'>{END_DATE}&nbsp</span sugar='slot'></td>
+</tr>
+<!-- END: row -->
+</table>
+<!-- END: campaign_data -->
+
+<br>
+<!--{LBL_SCHEDULING_FORM_TITLE}<div width="100%" id="scheduler" name="scheduler"></div>-->
+
+<script type="text/javascript" src="include/JSON.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script type="text/javascript" src="include/jsolait/init.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script type="text/javascript" src="include/jsolait/lib/urllib.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script type="text/javascript">{JSON_CONFIG_JAVASCRIPT}</script>
+<script type="text/javascript" src="include/javascript/jsclass_base.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script type="text/javascript" src="include/javascript/jsclass_async.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script type="text/javascript" src="modules/Meetings/jsclass_scheduler.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+
+<script type="text/javascript">
+
+    var root_div = document.getElementById('scheduler');
+
+    var sugarContainer_instance = new SugarContainer(document.getElementById('scheduler'));
+    sugarContainer_instance.start(SugarWidgetScheduler);
+
+
+    function fill_invitees()
+    {
+        if (typeof( GLOBAL_REGISTRY) != 'undefined')
+        {
+            SugarWidgetScheduler.fill_invitees(document.EditView);
+        }
+
+    }
+
+</script>
+
+</form>
+<script type="text/javascript">
+    Calendar.setup ({
+        inputField : "jscal_field", ifFormat : "{CALENDAR_DATEFORMAT}",onClose: function(cal) { cal.hide();SugarWidgetScheduler.update_time(); }, showsTime : false, button : "jscal_trigger", singleClick : true, step : 1
+    });
+    Calendar.setup ({
+        inputField : "call_back_jscal_field", ifFormat : "{CALENDAR_DATEFORMAT}",onClose: function(cal) { cal.hide();SugarWidgetScheduler.update_time(); }, showsTime : false, button : "call_back_jscal_trigger", singleClick : true, step : 1
+    });
+    check_status();
+</script>
+{JAVASCRIPT}
+<!-- END: main -->

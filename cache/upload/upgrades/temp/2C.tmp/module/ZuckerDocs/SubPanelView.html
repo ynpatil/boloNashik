@@ -1,0 +1,24 @@
+<!-- BEGIN: main -->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" class="listView">
+	<tr height="20">
+		<td scope="col" width="35%" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_NAME}</a></slot></td>
+		<td scope="col" width="15%" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_DOWNLOAD}</slot></td>
+		<td scope="col" width="15%" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_CATNAME}</slot></td>
+		<td scope="col" width="20%" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_MODIFIED}</slot></td>
+		<td scope="col" width="*" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_STATUS}</slot></td>
+	</tr>
+	<!-- BEGIN: row -->
+	<tr height="20"  onmouseover="setPointer(this, '{DOCUMENT.ID}', 'over', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmouseout="setPointer(this, '{DOCUMENT.ID}', 'out', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmousedown="setPointer(this, '{DOCUMENT.ID}', 'click', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');">
+  		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot><a href="{URL_PREFIX}index.php?action=DocView&module=ZuckerDocs&record={DOCUMENT.ID}&return_module={RETURN_MODULE}&return_action={RETURN_ACTION}&return_id={RETURN_ID}" class="listViewTdLinkS1"><img border="0" src="{DOCUMENT.ICON_PATH}"/> {DOCUMENT.NAME}</a></slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot><a href="{URL_PREFIX}download.php?module=ZuckerDocs&action=ViewDocument&record={DOCUMENT.ID}&version={DOCUMENT.VERSION}&mode=attachment" target="_blank">{MOD.LBL_DOWNLOAD_DOCUMENT_SHORT}</a>|<a href="{URL_PREFIX}download.php?module=ZuckerDocs&action=ViewDocument&record={DOCUMENT.ID}&version={DOCUMENT.VERSION}&mode=inline" target="_blank">{MOD.LBL_SHOW_DOCUMENT_SHORT}</a></slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{DOCUMENT.CAT_DESCRIPTION}</slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{DOCUMENT.MODIFIED}</slot></td>
+    	<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{DOCUMENT.STATUS} - {DOCUMENT.VERSION}</slot></td>
+	</tr>
+	<tr>
+		<td colspan="20" class="listViewHRS1"></td>
+	</tr>
+<!-- END: row -->
+	</table>
+{JAVASCRIPT}
+<!-- END: main -->

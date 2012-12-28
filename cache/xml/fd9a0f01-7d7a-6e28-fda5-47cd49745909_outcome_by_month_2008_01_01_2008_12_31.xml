@@ -1,0 +1,17 @@
+<graphData title="Pipeline total is 0">
+     <xData length="20">
+          <dataRow title="" endLabel="">
+               <bar id="" totalSize="0" altText="" url=""/>
+          </dataRow>
+     </xData>
+     <yData min="0" max="1000" length="1000" prefix="" suffix="" kDelim="," defaultAltText="Rollover a bar for details."/>
+     <colorLegend status="on">
+          <mapping id="Closed Lost" name="Closed Lost" color="0xFF0000"/>
+          <mapping id="Closed Won" name="Closed Won" color="0x00FF00"/>
+          <mapping id="Other" name="Other" color="0x0000FF"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2008-01-01 to 2008-12-31<br/>Opportunity count in 1K]]>
+     </graphInfo>
+     <chartColors  docBorder="0xcccccc"  docBg1="0xfafafa"  docBg2="0xdfdfdf"  xText="0x33485c"  yText="0x33485c"  title="0x990033"  misc="0x999999"  altBorder="0xdfdfdf"  altBg="0xeeeeee"  altText="0x64798d"  graphBorder="0x758a9e"  graphBg1="0xb0cbe2"  graphBg2="0xf9f9f9"  graphLines="0xffffff"  graphText="0x990033"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x990033"  legendBorder="0xdfdfdf"  legendBg1="0xf9f9f9"  legendBg2="0xf9f9f9"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xdfdfdf"  scrollBarBorder="0xfafafa"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

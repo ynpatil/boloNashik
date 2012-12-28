@@ -1,0 +1,24 @@
+<!-- BEGIN: main -->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" class="listView">
+<!-- BEGIN: header -->
+	<tr height="20">
+	<td scope="col" width="40%" class="listViewThS1" NOWRAP><slot><a href="{ORDER_BY}name" class="listViewThLinkS1">{MOD.LBL_LIST_USER_NAME}{arrow_start}{name_arrow}{arrow_end}</a></slot></td>
+	<td scope="col" width="29%" class="listViewThS1" NOWRAP><slot><a href="{ORDER_BY}billing_address_city" class="listViewThLinkS1">{MOD.LBL_HAS_ACCESS_TO}{arrow_start}{billing_address_city_arrow}{arrow_end}</a></slot></td>
+	<td scope="col" width="15%" class="listViewThS1" NOWRAP><slot><a href="{ORDER_BY}phone_office" class="listViewThLinkS1">&nbsp;{arrow_start}{phone_office_arrow}{arrow_end}</a></slot></td>
+   	<!-- BEGIN: open_source -->
+   	<!-- END: open_source -->
+	</tr>
+<!-- END: header -->
+
+<!-- BEGIN: row -->
+<tr height="20"  onmouseover="setPointer(this, '{ACCESS.ID}', 'over', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmouseout="setPointer(this, '{ACCESS.ID}', 'out', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmousedown="setPointer(this, '{ACCESS.ID}', 'click', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');">
+		<td scope='row' valign=TOP class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{ACCESS.FULL_NAME}</slot></td>
+    	<td valign=TOP class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{ACCESS.ACCESS_TO_MODULE}</slot></td>
+    	<td valign=TOP class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{ACCESS.REMOVE_LINK}</slot></td>
+   		<!-- BEGIN: open_source -->
+   		<!-- END: open_source -->
+</tr>
+<tr><td colspan="3" class="listViewHRS1"></td></tr>
+<!-- END: row -->
+	</table>
+<!-- END: main -->

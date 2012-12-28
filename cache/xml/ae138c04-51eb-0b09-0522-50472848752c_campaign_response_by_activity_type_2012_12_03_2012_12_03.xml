@@ -1,0 +1,33 @@
+<graphData title="Campaign Response by Vendors">
+     <yData defaultAltText="Total Targeted 2247">
+          <dataRow title="Planned" endLabel="2247">
+<bar id="197ad0d8-6537-07ce-043a-50b5a9a9c4c8" totalSize="1124" altText=" Total Targeted 2247. Planned 1124" url="#Planned" color=""/>
+<bar id="c1ba79e1-9688-e076-699e-50b5a9bff128" totalSize="1123" altText=" Total Targeted 2247. Planned 1123" url="#Planned" color=""/>
+          </dataRow>
+          <dataRow title="Held" endLabel="H">
+          </dataRow>
+          <dataRow title="Not Held" endLabel="N">
+          </dataRow>
+          <dataRow title="Not Interested" endLabel="n">
+          </dataRow>
+          <dataRow title="Ringing No Response" endLabel="r">
+          </dataRow>
+          <dataRow title="Sale" endLabel="S">
+          </dataRow>
+          <dataRow title="Wrong Number" endLabel="w">
+          </dataRow>
+          <dataRow title="Do Not Call" endLabel="d">
+          </dataRow>
+          <dataRow title="Call Back/Scheduled call Back" endLabel="c">
+          </dataRow>
+     </yData>
+     <xData min="0" max="3000" length="10" prefix="" suffix=""/>
+     <colorLegend status="on">
+          <mapping id="197ad0d8-6537-07ce-043a-50b5a9a9c4c8" name="Vendor2" color="0xFF0000"/>
+          <mapping id="c1ba79e1-9688-e076-699e-50b5a9bff128" name="Vendor1" color="0x00FF00"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[ ]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

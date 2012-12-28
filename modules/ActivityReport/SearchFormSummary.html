@@ -1,0 +1,138 @@
+<!--
+/*********************************************************************************
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ ********************************************************************************/
+/*********************************************************************************
+ * $Id: EditView.html,v 1.59.2.4 2005/05/24 00:26:16 ajay Exp $
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+
+<form name="SearchView" method="GET" action="index.php">
+		<input type="hidden" name="module" value="ActivityReport">
+		<input type="hidden" name="action" value="summary">
+		<input type="hidden" name="start_date" value="{START_DATE}">
+		<input type="hidden" name="end_date" value="{END_DATE}">
+		<input type="hidden" name="user" value="{USER}">
+		<input type="hidden" name="branch" value="{BRANCH}">		
+		<input type="hidden" name="vertical" value="{VERTICAL}">				
+		<input type="hidden" name="activity_report_filter" value="{ACTIVITY_REPORT_FILTER}">
+</form>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabForm">
+<tr>
+<td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	<td width="15%" class="dataLabel"><slot>{MOD.LBL_TODAY} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+	<td width="35%" class="dataField"><slot><select id='activity_filter' tabindex="2" onChange="checkActivityFilter()">{ACTIVITY_REPORT_FILTER_OPTIONS}</select></slot></td>
+	<td width="15%" class="dataLabel"><slot>{MOD.LBL_FOR_USER} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+	<td width="35%" class="dataField"><slot><select tabindex="2" id='user_options'>{USER_OPTIONS}</select></slot></td>
+	</tr>
+	<tr>
+	<td width="15%" class="dataLabel"><slot>{MOD.LBL_BRANCH} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+	<td width="35%" class="dataField"><slot><select id='branch_options' tabindex="2">{BRANCH_OPTIONS}</select></slot></td>
+	<td width="15%" class="dataLabel"><slot>{MOD.LBL_VERTICAL} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+	<td width="35%" class="dataField"><slot><select tabindex="2" id='verticals_options'>{VERTICAL_OPTIONS}</select></slot></td>
+	</tr>
+	<tr valign="top" id="DATE_RANGE" style="display:{DISPLAY}">
+	<td class="dataLabel"><slot>{MOD.LBL_START_DATE} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+	<td class="dataField"><slot>
+		<table  cellpadding="0" cellspacing="0">
+			<tr>
+				<td nowrap><input name="st_dt" id='jscal_field1' onfocus="this.blur()" tabindex='3' size='11' maxlength='10' type="text" value="{START_DATE}"> <img src="themes/{THEME}/images/jscalendar.gif" alt="{CALENDAR_DATEFORMAT}"  id="jscal_trigger" align="absmiddle">&nbsp;</td>
+			</tr>
+		</table>
+	</td>
+	<td class="dataLabel"><slot>{MOD.LBL_END_DATE} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+	<td class="dataField"><slot>
+
+		<table  cellpadding="0" cellspacing="0">
+
+			<tr>
+
+				<td nowrap><input name="ed_dt" id='jscal_field2' onfocus="this.blur()" tabindex='4' size='11' maxlength='10' type="text" value="{END_DATE}"> <img src="themes/{THEME}/images/jscalendar.gif" alt="{CALENDAR_DATEFORMAT}"  id="jscal_trigger1" align="absmiddle">&nbsp;</td>
+
+			</tr>
+		</table>
+	</td>
+	</tr>
+	<tr>
+	<td colspan="4" align="center">
+			<input title="{MOD.LBL_FETCH_BUTTON_TITLE}" accessKey="{MOD.LBL_FETCH_BUTTON_KEY}" class="button" onclick="fill_search_form();" type="submit" name="button" value="  {MOD.LBL_FETCH_BUTTON_LABEL}  " >
+	</td>
+	</tr>
+</table>
+</td></tr></table>
+
+<script>
+
+function checkActivityFilter()
+{
+	//alert("In checkActivityFilter");
+	var options = document.getElementById("activity_filter");
+	var value = options[options.selectedIndex].value;
+	var dateRange = document.getElementById("DATE_RANGE");
+
+	//alert("Date range :"+dateRange.style.display+ "Value :"+value);
+	if(dateRange)
+	{
+		if(value == 'custom')
+			dateRange.style.display = 'block';
+		else
+			dateRange.style.display = 'none';
+	}
+}
+
+function fill_search_form()
+{
+	document.SearchView.start_date.value = document.getElementById("jscal_field1").value;
+	document.SearchView.end_date.value = document.getElementById("jscal_field2").value;
+
+	//alert("Till here");
+	var options = document.getElementById("user_options");
+	document.SearchView.user.value = options[options.selectedIndex].value;
+	//alert("Till here 1 "+document.SearchView.user.value);
+
+	options = document.getElementById("branch_options");
+	document.SearchView.branch.value = options[options.selectedIndex].value;
+
+	options = document.getElementById("verticals_options");
+	document.SearchView.vertical.value = options[options.selectedIndex].value;
+
+	options = document.getElementById("activity_filter");
+	document.SearchView.activity_report_filter.value = options[options.selectedIndex].value;
+	//alert("Till here 2 "+document.SearchView.activity_report_filter.value);
+	document.SearchView.submit();
+}
+</script>
+
+<script type="text/javascript">
+	Calendar.setup ({
+		inputField : "jscal_field1", ifFormat : "{CALENDAR_DATEFORMAT}", showsTime : false, button : "jscal_trigger", singleClick : true, step : 1
+	});
+
+	Calendar.setup ({
+		inputField : "jscal_field2", ifFormat : "{CALENDAR_DATEFORMAT}", showsTime : false, button : "jscal_trigger1", singleClick : true, step : 1
+	});
+
+</script>
+<!-- END: main -->

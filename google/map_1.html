@@ -1,0 +1,86 @@
+<html>
+	<head>
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAczG-ji6liuX87yshoX4i7RScO5xqr_sXDyTN9xn2uoFd1ITz9BQaeqigFPp7WqjkbMovxvCKHfD2Pw" type="text/javascript"></script>
+	</head>
+<body onunload="GUnload()">
+
+<!-- ========================================================= -->  
+<!-- ========================  MAP  ========================== -->  
+<!-- ========================================================= -->  
+
+    <!-- you can use tables or divs for the overall layout -->
+		<div id="map" style="width: 600px; height: 550px"></div>
+		
+    <noscript><b>JavaScript must be enabled in order for you to use Google Maps.</b> 
+      However, it seems JavaScript is either disabled or not supported by your browser. 
+      To view Google Maps, enable JavaScript by changing your browser options, and then 
+      try again.
+    </noscript>
+
+    <script type="text/javascript">
+    //<![CDATA[
+    if (GBrowserIsCompatible()) {
+			var gshops = [];
+      var map;
+      
+      // create the map
+      map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      // CUSTOMISE - Change the coordinates and zoom level as appropriate
+      map.setCenter(new GLatLng(48.40003249610685,2.548828125), 4);
+
+      // A function to create the marker and set up the event window
+      function createMarker(point,name,html,zoom) {
+        var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function() {
+	      	map.panTo(point);
+	      	marker.openInfoWindowHtml(html);
+        });
+        return marker;
+      }
+
+			xmlFile = "data.xml";
+			if (xmlFile) {
+	      // Read the data from example.xml
+	      var request = GXmlHttp.create();
+	      request.open("GET", xmlFile, true);
+	      request.onreadystatechange = function() {
+	        if (request.readyState == 4) {
+	          var xmlDoc = request.responseXML;
+	          // obtain the array of markers and loop through it
+	          var markers = xmlDoc.documentElement.getElementsByTagName("Placemark");
+	          for (var i = 0; i < markers.length; i++) {
+	            // obtain the attribues of each marker
+	            var addr = markers[i].getElementsByTagName("description")[0].firstChild.nodeValue;
+	            var coords = markers[i].getElementsByTagName("coordinates")[0].firstChild.nodeValue.split(",");
+	            var lng = parseFloat(coords[1]);
+	            var lat = parseFloat(coords[0]);
+	            var point = new GLatLng(lat,lng);
+	            var name = markers[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+	            var html = "";
+	            // create the marker
+            	html = "<b>"+name+"</b><br/>"+addr;
+            	html = "<div style='background-color:#F0F0F0; border:2px #D0D0D0 solid; font-family:arial; font-size:11px; height:90%; width:95%; padding: 2px;'>"+html+"</div>";
+            	var marker = createMarker(point,name,html,0);
+	            map.addOverlay(marker);
+	            gshops.push(marker);
+	          }
+	        }
+	      }
+	      request.send(null);
+	    }	    
+    }
+
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+    //]]>
+    </script>
+
+<!-- ========================================================= -->  
+<!-- ========================  MAP  ========================== -->  
+<!-- ========================================================= -->  
+
+</body>
+</html>

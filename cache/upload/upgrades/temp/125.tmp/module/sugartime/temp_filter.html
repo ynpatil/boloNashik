@@ -1,0 +1,96 @@
+<!-- BEGIN: main -->
+<table width="100%"  border="0" cellspacing="0" cellpadding="10" class="tabForm">
+  <tr>
+    <td>
+	<form name="Filter" method="POST" action="index.php">
+	<input type="hidden" name="query" value="true"/>
+	<input type="hidden" name="module" value="sugartime" />
+	<input type="hidden" name="action" value="index" />
+	<table width="100%"  border="0" cellspacing="2" cellpadding="0">
+	  <tr>
+		<td align="right" width="15%"><slot>{MOD.LBL_DATE_RANGE}</slot></td>
+		<td align="left">
+		<slot>
+		<table border="0" cellspacing="1" cellpadding="0">
+		  <tr>
+			<td><input name='date_from' id='date_from' onblur="parseDate(this, '{CALENDAR_DATEFORMAT}');" tabindex='1' maxlength='10' size='11' {READONLY} type="text" value="{DATE_FROM}"></td>
+			<td><img src="themes/{THEME}/images/jscalendar.gif" alt="{APP.LBL_ENTER_DATE}"  id="date_from_trigger" align="absmiddle"></td>
+			<td>&nbsp; - &nbsp;</td>
+			<td><input name='date_to' id='date_to' onblur="parseDate(this, '{CALENDAR_DATEFORMAT}');" tabindex='1' maxlength='10' size='11' {READONLY} type="text" value="{DATE_TO}"></td>
+			<td><img src="themes/{THEME}/images/jscalendar.gif" alt="{APP.LBL_ENTER_DATE}"  id="date_to_trigger" align="absmiddle"></td>
+		  </tr>
+		</table>
+		</slot>
+		</td>
+		<td align="left">&nbsp;</td>
+		<td align="right" width="15%"><slot>{MOD.LBL_LISTUSER}</slot></td>
+		<td align="left"><slot><input name='user' type="text" size='15' maxlength='30' value='{USER}'></slot></td>
+		<td align="right">
+		<input title="{APP.LBL_SEARCH_BUTTON_TITLE}" accessKey="{APP.LBL_SEARCH_BUTTON_KEY}" class="button" type="submit" name="button" value="{APP.LBL_SEARCH_BUTTON_LABEL}"/>
+		<input title="{APP.LBL_CLEAR_BUTTON_TITLE}" accessKey="{APP.LBL_CLEAR_BUTTON_KEY}" onclick="clear_form(this.form);" class="button" type="button" name="clear" value=" {APP.LBL_CLEAR_BUTTON_LABEL} "/>
+		</td>
+	  </tr>
+	</table>
+	</form>
+	
+	
+	</td>
+  </tr>
+</table>
+<script type="text/javascript">
+Calendar.setup ({
+	inputField : "date_from", ifFormat : "{CALENDAR_DATEFORMAT}", showsTime : false, button : "date_from_trigger", singleClick : true, step : 1
+});
+Calendar.setup ({
+	inputField : "date_to", ifFormat : "{CALENDAR_DATEFORMAT}", showsTime : false, button : "date_to_trigger", singleClick : true, step : 1
+});
+</script>
+<script type="text/javascript">
+
+function set_date_due_values(form) {
+	if (form.date_due_flag.checked) {
+		form.date_due_flag.value='on';
+		form.date_due.value="";
+		form.time_due.value="";
+		form.date_due.readOnly=true;
+		form.time_due.readOnly=true;
+		if(typeof(form.due_meridiem) != 'undefined') form.due_meridiem.disabled=true;
+		document.images.jscal_trigger.width = 18;
+		document.images.jscal_trigger.height = 18;
+
+	}
+	else {
+		form.date_due_flag.value='off';
+		form.date_due.readOnly=false;
+		form.time_due.readOnly=false;
+		
+		if(typeof(form.due_meridiem) != 'undefined') form.due_meridiem.disabled=false;
+		document.images.jscal_trigger.width = 18;
+		document.images.jscal_trigger.height = 18;
+	}
+}
+	
+function set_date_start_values(form) {
+	if (form.date_start_flag.checked) {
+		form.date_start_flag.value='on';
+		form.date_start.value="";
+		form.time_start.value="";
+		form.date_start.readOnly=true;
+		form.time_start.readOnly=true;
+		if(typeof(form.start_meridiem) != 'undefined') form.start_meridiem.disabled=true;
+		document.images.date_start_trigger.width = 18;
+		document.images.date_start_trigger.height = 18;
+	}
+	else {
+		form.date_start_flag.value='off';
+		form.date_start.readOnly=false;
+		form.time_start.readOnly=false;
+		if(typeof(form.start_meridiem) != 'undefined') form.start_meridiem.disabled=false;
+		document.images.date_start_trigger.width = 18;
+		document.images.date_start_trigger.height = 18;
+	}
+}
+
+</script>
+{JAVASCRIPT}
+<!-- END: main -->

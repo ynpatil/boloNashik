@@ -1,0 +1,32 @@
+<graphData title="Pipeline total is 2">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="1">
+          <bar id="87d20eca-b1ac-cb6e-e878-478c74f7aeb4" totalSize="1" altText="aashishp: 1 opportunities  where sales stage is Suspecting" url="index.php?module=Opportunities&action=index&assigned_user_id[]=87d20eca-b1ac-cb6e-e878-478c74f7aeb4&sales_stage=Suspecting&date_start=2007-07-15&date_closed=2010-01-01&query=true&searchFormTab=advanced_search"/>
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="1">
+          <bar id="597c0623-1433-e6bb-b09b-4754145423b0" totalSize="1" altText="aashiman: 1 opportunities  where sales stage is Negotiation/Review" url="index.php?module=Opportunities&action=index&assigned_user_id[]=597c0623-1433-e6bb-b09b-4754145423b0&sales_stage=Negotiation%2FReview&date_start=2007-07-15&date_closed=2010-01-01&query=true&searchFormTab=advanced_search"/>
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="1" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="e4428753-95b2-f9b0-e469-47a096591e03" name=" Yeshodharak" color="0xFF0000"/>
+          <mapping id="216c1722-7453-7055-1897-4732f496b8cf" name="aartis" color="0x00FF00"/>
+          <mapping id="597c0623-1433-e6bb-b09b-4754145423b0" name="aashiman" color="0x0000FF"/>
+          <mapping id="87d20eca-b1ac-cb6e-e878-478c74f7aeb4" name="aashishp" color="0xFF6600"/>
+          <mapping id="70f796ca-ffac-a0af-4862-46a8967dc35f" name="abhayd" color="0x42FF8E"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2007-07-15 to 2010-01-01<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

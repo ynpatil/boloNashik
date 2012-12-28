@@ -1,0 +1,26 @@
+<!-- BEGIN: main -->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" class="listView">
+	<tr height="20">
+		<td scope="col" width="20%" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_NAME}</a></slot></td>
+		<td scope="col" width="20%" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_PARENT}</slot></td>
+		<td scope="col" width="15%" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_CATNAME}</slot></td>
+		<td scope="col" width="20%" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_MODIFIED}</slot></td>
+		<td scope="col" width="*" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_STATUS}</slot></td>
+		<td scope="col" width="10" class="listViewThS1" nowrap><slot>&nbsp;</slot></td>
+	</tr>
+	<!-- BEGIN: row -->
+	<tr height="20"  onmouseover="setPointer(this, '{DOCUMENT.ID}', 'over', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmouseout="setPointer(this, '{DOCUMENT.ID}', 'out', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmousedown="setPointer(this, '{DOCUMENT.ID}', 'click', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');">
+  		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot><a href="{URL_PREFIX}index.php?action=DocView&module=ZuckerDocs&record={DOCUMENT.ID}" class="listViewTdLinkS1"><img border="0" src="{DOCUMENT.ICON_PATH}"/> {DOCUMENT.NAME}</a></slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot><a href="{DOCUMENT.PARENT_LINK}" class="tabDetailViewDFLink">{DOCUMENT.PARENT_NAME}</a></slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{DOCUMENT.CAT_DESCRIPTION}</slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{DOCUMENT.MODIFIED}</slot></td>
+    	<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{DOCUMENT.STATUS} - {DOCUMENT.VERSION}</slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot><a href="index.php?module=ZuckerDocs&action=DeleteDocumentLink&record={RECORD}&doc_id={DOCUMENT.ID}&return_action=DocView&return_id={RECORD}">{MOD.LBL_UNLINK_DOC}</a></slot></td>
+	</tr>
+	<tr>
+		<td colspan="20" class="listViewHRS1"></td>
+	</tr>
+<!-- END: row -->
+	</table>
+{JAVASCRIPT}
+<!-- END: main -->

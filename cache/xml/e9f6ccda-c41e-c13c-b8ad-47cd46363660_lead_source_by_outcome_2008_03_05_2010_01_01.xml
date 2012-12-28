@@ -1,0 +1,30 @@
+<graphData title="Pipeline total is 0">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="e855884e-6259-9dd1-2d7f-47cbb128c0fb" name="manishac" color="0xFF0000"/>
+          <mapping id="28d904d4-0d81-0eb2-34be-47cbb05f78da" name="manjur" color="0x00FF00"/>
+          <mapping id="95785f68-b339-1263-e22e-47cbaed378c8" name="reemac" color="0x0000FF"/>
+          <mapping id="44b423c5-3cdf-59b8-e5f0-47cbafe4095c" name="sameera" color="0xFF6600"/>
+          <mapping id="b408069a-89ac-c554-a98a-47cbaf97f9d6" name="santoshs" color="0x42FF8E"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2008-03-05 to 2010-01-01<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

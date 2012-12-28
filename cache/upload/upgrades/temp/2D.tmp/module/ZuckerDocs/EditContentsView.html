@@ -1,0 +1,31 @@
+<!-- BEGIN: main -->
+<form name="EditContentsView" method="POST" action="index.php">
+	<input type="hidden" name="module" value="ZuckerDocs">
+	<input type="hidden" name="record" value="{ID}">
+	<input type="hidden" name="action">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td style="padding-bottom: 2px;">
+			<input class="button" onclick="this.form.action.value='Checkin';" type="submit" name="button" value="  {MOD.LBL_CHECKIN}  " > 
+			<input class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+		</td>
+	</tr>
+</table>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tabForm">
+	<tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_HIST_COMMENT}</slot></td>
+		<td width="*" class="tabDetailViewDF"><slot><input name='comment' size='35' maxlength='50' type="text" value="{CHECKIN_COMMENT}"></slot></td>
+	</tr>
+	<tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_CHECKIN_MAJOR}</slot></td>
+		<td width="*" class="tabDetailViewDF"><slot><input type="checkbox" name="major" value="true" {MAJOR_CHECKED}/></slot></td>
+	</tr>
+	<tr>
+		<td colspan="2" class="tabDetailViewDF"><slot><textarea id="contents" name='contents' cols="150" rows="25">{CONTENTS}</textarea></slot></td>
+	</tr>
+</table>	
+</form>
+{JAVASCRIPT}
+<!-- END: main -->

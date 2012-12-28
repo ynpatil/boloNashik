@@ -1,0 +1,171 @@
+<!-- BEGIN: main -->
+<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0" class="tabDetailView">
+	<tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_NAME}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot>{NAME}</slot></td>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_FILE}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot>{FILENAME}</slot></td>
+	</tr><tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_MODIFIED}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot>{MODIFIED}</slot></td>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_STATUS}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot>{STATUS} - {VERSION}</slot></td>
+	</tr><tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_DESCRIPTION}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot>{DESCRIPTION}</slot></td>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_CATNAME}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot>{CATNAME}</slot></td>
+	</tr><tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_PARENT}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot><a href="{PARENT_LINK}" class="tabDetailViewDFLink">{PARENT_NAME}</a></slot></td>
+		<td width="15%" rowspan="2" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_MIMETYPE}</slot></td>
+		<td width="35%" rowspan="2" class="tabDetailViewDF" cellspacing="0" cellpadding="0"><slot><table cellspacing="0" cellpadding="0" border="0"><tr><td class="tabDetailViewDF" valign="top">{MIMETYPE}</td><td valign="top"><img border="0" src="{ICON_PATH}"/></td></tr></table></slot></td>
+	</tr>
+	
+	<!-- BEGIN: ktlink -->	
+	<tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_LIST_URL}</slot></td>
+		<td class="tabDetailViewDF"><slot><a href="{URL}" target="dms">{MOD.DMS_LINK_TEXT}</a></slot></td>
+	</tr>
+	<!-- END: ktlink -->	
+</table>
+</p>
+<!-- END: main -->
+
+
+
+<!-- BEGIN: checkout -->
+<p>
+<form action="index.php" method="post" id="form">
+	<input type="hidden" name="record" value="{ID}">
+	<input type="hidden" name="module" value="ZuckerDocs">
+	<input type="hidden" name="action" value="Checkout">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td style="padding-bottom: 2px;"><input title="{MOD.LBL_CHECKOUT}" class="button" type="submit" value="  {MOD.LBL_CHECKOUT}  ">  </td>
+	</tr>
+	</table>
+	<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0" class="tabDetailView">
+	<tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_HIST_COMMENT}</slot></td>
+		<td class="tabDetailViewDF"><slot><input name='comment' size='35' maxlength='50' type="text" value="{CHECKOUT_COMMENT}"></slot></td>
+	</tr>
+	</table>
+</form>
+</p>
+<!-- END: checkout -->
+
+<!-- BEGIN: checkin -->
+<p>
+<form action="index.php" method="post" id="form" enctype="multipart/form-data">
+	<input type="hidden" name="record" value="{ID}">
+	<input type="hidden" name="module" value="ZuckerDocs">
+	<input type="hidden" name="action" value="Checkin">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td style="padding-bottom: 2px;"><input title="{MOD.LBL_CHECKIN}" class="button" type="submit" value="  {MOD.LBL_CHECKIN}  ">  </td>
+	</tr>
+	</table>
+	<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0" class="tabDetailView">
+	<tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_HIST_COMMENT}</slot></td>
+		<td class="tabDetailViewDF"><slot><input name='comment' size='35' maxlength='50' type="text" value="{CHECKIN_COMMENT}"></slot></td>
+	</tr>
+	<tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_CHECKIN_MAJOR}</slot></td>
+		<td class="tabDetailViewDF"><slot><input type="checkbox" name="major" value="true" {MAJOR_CHECKED}/></slot></td>
+	</tr>
+	<tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_LIST_FILE}</slot></td>
+		<td class="tabDetailViewDF"><slot><input name="uploadfile" type="file" size="60"/></slot></td>
+	</tr>
+	</table>
+</form>
+</p>
+<!-- END: checkin -->
+
+<!-- BEGIN: viewdocument -->
+<p>
+<table cellpadding="0" cellspacing="0" border="0">
+		<!-- BEGIN: view -->
+		<tr><td>
+		<form action="download.php" method="get" id="form" target="_blank">
+			<input type="hidden" name="module" value="ZuckerDocs">
+			<input type="hidden" name="record" value="{ID}">
+			<input type="hidden" name="action" value="ViewDocument">
+			<input type="hidden" name="mode" value="attachment">
+			<input type="hidden" name="return_module" value="ZuckerDocs">
+			<input type="hidden" name="return_action" value="DocView">
+			<input type="hidden" name="return_id" value="{ID}">
+			<input class="button" type="submit" value="  {MOD.LBL_DOWNLOAD_DOCUMENT}  ">
+		</form>
+		</td><td>
+		<form action="download.php" method="get" id="form" target="_blank">
+			<input type="hidden" name="module" value="ZuckerDocs">
+			<input type="hidden" name="record" value="{ID}">
+			<input type="hidden" name="action" value="ViewDocument">
+			<input type="hidden" name="mode" value="inline">
+			<input type="hidden" name="return_module" value="ZuckerDocs">
+			<input type="hidden" name="return_action" value="DocView">
+			<input type="hidden" name="return_id" value="{ID}">
+			<input class="button" type="submit" value="  {MOD.LBL_SHOW_DOCUMENT}  ">
+		</form>
+		</td>
+		<!-- END: view -->
+		
+		<!-- BEGIN: edit -->
+		<td style="padding-left: 2px;">
+		<form action="index.php" method="post" id="form">
+			<input type="hidden" name="module" value="ZuckerDocs">
+			<input type="hidden" name="record" value="{ID}">
+			<input type="hidden" name="action" value="EditContentsView">
+			<input type="hidden" name="return_module" value="ZuckerDocs">
+			<input type="hidden" name="return_action" value="DocView">
+			<input type="hidden" name="return_id" value="{ID}">
+			<input class="button" type="submit" value="  {MOD.LBL_EDIT_CONTENT}  ">
+		</form>
+		</td></tr>
+		<!-- END: edit -->
+	</table>
+</p>
+<!-- END: viewdocument -->
+
+<!-- BEGIN: viewdocument1 -->
+<p>
+<form action="download.php" method="get" id="form" target="_blank">
+	<input type="hidden" name="module" value="ZuckerDocs">
+	<input type="hidden" name="action" value="ViewDocument">
+	<input type="hidden" name="record" value="{ID}">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td style="padding-bottom: 2px;"><input title="{MOD.LBL_VIEW}" class="button" type="submit" value="  {MOD.LBL_VIEW}  ">  </td>
+	</tr>
+	</table>
+</form>
+</p>
+<!-- END: viewdocument1 -->
+
+
+<!-- BEGIN: history-->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" class="listView">
+	<tr height="20">
+		<td scope="col" width="20%" class="listViewThS1" nowrap><slot>{MOD.LBL_HIST_DATETIME}</slot></td>
+		<td scope="col" width="10%" class="listViewThS1" nowrap><slot>{MOD.LBL_HIST_TYPE}</a></slot></td>
+		<td scope="col" width="10%" class="listViewThS1" nowrap><slot>{MOD.LBL_HIST_USER}</slot></td>
+		<td scope="col" width="10%" class="listViewThS1" nowrap><slot>{MOD.LBL_HIST_VERSION}</slot></td>
+		<td scope="col" width="*" class="listViewThS1" nowrap><slot>{MOD.LBL_HIST_COMMENT}</slot></td>
+	</tr>
+	<!-- BEGIN: row -->
+	<tr height="20"  onmouseover="setPointer(this, '{DOCUMENT.ID}', 'over', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmouseout="setPointer(this, '{DOCUMENT.ID}', 'out', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmousedown="setPointer(this, '{DOCUMENT.ID}', 'click', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');">
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{HISTORY.DATETIME}</slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{HISTORY.TYPE}</slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{HISTORY.USER}</slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{HISTORY.VERSION}</slot></td>
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{HISTORY.COMMENT}</slot></td>
+	</tr>
+	<tr>
+		<td colspan="20" class="listViewHRS1"></td>
+	</tr>
+	<!-- END: row -->
+</table>
+<!-- END: history -->

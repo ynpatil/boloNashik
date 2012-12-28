@@ -1,0 +1,38 @@
+<graphData title="Pipeline total is 156">
+     <xData length="20">
+          <dataRow title="2008-01" endLabel="73">
+               <bar id="Other" totalSize="70" altText="2008-01: 70 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&date_closed=2008-01&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+               <bar id="Closed Won" totalSize="3" altText="2008-01: 3 opportunities  where outcome is Closed Won" url="index.php?module=Opportunities&action=index&date_closed=2008-01&sales_stage=Closed+Won&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="2008-02" endLabel="31">
+               <bar id="Other" totalSize="30" altText="2008-02: 30 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&date_closed=2008-02&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+               <bar id="Closed Won" totalSize="1" altText="2008-02: 1 opportunities  where outcome is Closed Won" url="index.php?module=Opportunities&action=index&date_closed=2008-02&sales_stage=Closed+Won&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="2008-03" endLabel="42">
+               <bar id="Other" totalSize="41" altText="2008-03: 41 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&date_closed=2008-03&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+               <bar id="Closed Won" totalSize="1" altText="2008-03: 1 opportunities  where outcome is Closed Won" url="index.php?module=Opportunities&action=index&date_closed=2008-03&sales_stage=Closed+Won&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="2008-04" endLabel="5">
+               <bar id="Other" totalSize="5" altText="2008-04: 5 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&date_closed=2008-04&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="2008-10" endLabel="1">
+               <bar id="Other" totalSize="1" altText="2008-10: 1 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&date_closed=2008-10&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="2008-11" endLabel="2">
+               <bar id="Other" totalSize="2" altText="2008-11: 2 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&date_closed=2008-11&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="2008-12" endLabel="2">
+               <bar id="Other" totalSize="2" altText="2008-12: 2 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&date_closed=2008-12&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+     </xData>
+     <yData min="0" max="80" length="80" prefix="" suffix="" kDelim="," defaultAltText="Rollover a bar for details."/>
+     <colorLegend status="on">
+          <mapping id="Closed Lost" name="Closed Lost" color="0xFF0000"/>
+          <mapping id="Closed Won" name="Closed Won" color="0x00FF00"/>
+          <mapping id="Other" name="Other" color="0x0000FF"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2008-01-01 to 2008-12-31<br/>Opportunity count in 1K]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

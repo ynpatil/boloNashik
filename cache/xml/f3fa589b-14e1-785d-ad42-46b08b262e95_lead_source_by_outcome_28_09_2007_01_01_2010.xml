@@ -1,0 +1,33 @@
+<graphData title="Pipeline total is 0">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="bed37eac-035b-a835-47c9-46aed3c9703d" name="gurdeept" color="0xFF0000"/>
+          <mapping id="6b2d1130-260c-84ab-e549-46aed2ed1ae0" name="hiteshs" color="0x00FF00"/>
+          <mapping id="ee170405-d725-64df-2818-46aed3da7a89" name="karthikeyank" color="0x0000FF"/>
+          <mapping id="6715ba01-8d3b-f8de-e772-46aed1da776e" name="manojn" color="0xFF6600"/>
+          <mapping id="f088b9f0-16c3-1ba2-aba5-46aed21c5901" name="nilanjanas" color="0x42FF8E"/>
+          <mapping id="5d21922c-c838-211a-f674-46aed1973c2e" name="rajendrab" color="0x6600FF"/>
+          <mapping id="6acac8b7-2b2b-d4b4-11ae-46aed1830011" name="sandhyad" color="0xFFFF00"/>
+          <mapping id="19a0036b-58d6-abf6-4a54-46af16ff5d72" name="sumits" color="0x00FFFF"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 28-09-2007 to 01-01-2010<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

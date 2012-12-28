@@ -1,0 +1,57 @@
+<!--
+/*********************************************************************************
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ ********************************************************************************/
+/*********************************************************************************
+ * {APP.LBL_CURRENCY_SYM}Header: /cvsroot/sugarcrm/sugarcrm/modules/Activities/OpenListView.html,v 1.1 2004/07/02 07:32:20 sugarclint Exp {APP.LBL_CURRENCY_SYM}
+ ********************************************************************************/
+-->
+<!-- BEGIN: open_activity -->
+
+<table cellpadding="0" cellspacing="0" width="100%" border="0" class="listView">
+	<tr height="20" class="listViewThS1">
+	<td scope="col" class="listViewThS1">{MOD.LBL_LIST_BRANCH}</td>
+	<td scope="col" class="listViewThS1">{MOD.LBL_LIST_MEETINGS}</td>	
+	<td scope="col" class="listViewThS1">{MOD.LBL_LIST_CALLS}</td>			
+	<td scope="col" class="listViewThS1">{MOD.LBL_LIST_TASKS}</td>
+        <!--
+	<td scope="col" class="listViewThS1">{MOD.LBL_LIST_ACCOUNTS}</td>	
+	<td scope="col" class="listViewThS1">{MOD.LBL_LIST_CONTACTS}</td>
+        -->
+	<td scope="col" class="listViewThS1">{MOD.LBL_LIST_TOTAL_COUNT}</td>	
+</tr>
+
+<!-- BEGIN: row -->
+<tr height="20"  onmouseover="setPointer(this, '{ACTIVITY.ID}', 'over', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmouseout="setPointer(this, '{ACTIVITY.ID}', 'out', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmousedown="setPointer(this, '{ACTIVITY.ID}', 'click', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');">
+		<td nowrap valign=TOP bgcolor="{BG_COLOR}" class="{ROW_COLOR}S1">{ACTIVITY.BRANCH}</td>
+		<td nowrap valign=TOP bgcolor="{BG_COLOR}" class="{ROW_COLOR}S1">{ACTIVITY.MEETINGS}</td>
+		<td nowrap valign=TOP bgcolor="{BG_COLOR}" class="{ROW_COLOR}S1">{ACTIVITY.CALLS}</td>	
+		<td nowrap valign=TOP bgcolor="{BG_COLOR}" class="{ROW_COLOR}S1">{ACTIVITY.TASKS}</td>
+                <!--
+		<td nowrap valign=TOP bgcolor="{BG_COLOR}" class="{ROW_COLOR}S1">{ACTIVITY.ACCOUNTS}</td>
+		<td nowrap valign=TOP bgcolor="{BG_COLOR}" class="{ROW_COLOR}S1">{ACTIVITY.CONTACTS}</td>
+                -->
+		<td nowrap valign=TOP bgcolor="{BG_COLOR}" class="{ROW_COLOR}S1">{ACTIVITY.TOTAL_COUNT}</td>
+</tr>
+<tr><td colspan="20" class="listViewHRS1"></td></tr>
+<!-- END: row -->
+</table>
+<!-- END: open_activity -->

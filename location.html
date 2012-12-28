@@ -1,0 +1,70 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+    <!-- jQuery Min -->
+        <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+        <!-- Google Maps -->
+        <script type="text/javascript" charset="utf-8" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+  <script type="text/javascript">
+
+
+var geo = navigator.geolocation;
+    if( geo ){
+        geo.getCurrentPosition( showLocation, mapError, { timeout: 5000, enableHighAccuracy: true } );
+    }
+
+
+function showLocation( position ){
+
+    //  alert("lat"+ position.coords.latitude);
+      var lat = position.coords.latitude;
+      var lng = position.coords.longitude;
+      document.getElementById('lat').innerHTML=lat;
+      document.getElementById('lon').innerHTML=lng;
+      //return 'Latitude:'+lat+", Longitude:"+lng;
+      //getLocation(lat,lng);
+
+    }
+
+ function mapError( e ){
+        var error;
+        switch( e.code ){
+            case 1:
+                error = "Permission Denied.\n\n Please turn on Geo Location by going to Settings > Location Services > Safari";
+                break;
+            case 2:
+                error = "Network or Satellites Down";
+                break;
+            case 3:
+                error = "GeoLocation timed out";
+                break;
+            case 0:
+                error = "Other Error";
+                break;
+        }
+        $("#map").html( error );
+    }
+showLocation();
+  </script>
+  <body>
+      <table >
+          <tr>
+              <td>Latitude: </td>
+              <td><span id="lat"></span></td>
+          </tr>
+          <tr>
+              <td>Longitude: </td>
+              <td><span id="lon"></span></td>
+          </tr>
+      </table>
+  </body>
+</html>

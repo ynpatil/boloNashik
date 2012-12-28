@@ -1,0 +1,46 @@
+<?php
+$avail_fields=array (
+  'country_id_c' => 
+  array (
+    'id' => 'StateMastercountry_id_c',
+    'name' => 'country_id_c',
+    'label' => 'Country_c_1',
+    'help' => NULL,
+    'custom_module' => 'StateMaster',
+    'data_type' => 'relate',
+    'max_size' => '36',
+    'required_option' => 'required',
+    'default_value' => '',
+    'date_modified' => '2006-06-30 16:42:02',
+    'deleted' => '0',
+    'audited' => '0',
+    'mass_update' => '1',
+    'duplicate_merge' => '0',
+    'ext1' => 'moduleList',
+    'ext2' => 'CountryMaster',
+    'ext3' => NULL,
+    'ext4' => NULL,
+  ),
+  'region_id_c' => 
+  array (
+    'id' => 'StateMasterregion_id_c',
+    'name' => 'region_id_c',
+    'label' => 'Region_c_1_c_1',
+    'help' => NULL,
+    'custom_module' => 'StateMaster',
+    'data_type' => 'varchar',
+    'max_size' => '36',
+    'required_option' => 'required',
+    'default_value' => NULL,
+    'date_modified' => '2012-10-17 06:43:52',
+    'deleted' => '0',
+    'audited' => '0',
+    'mass_update' => '1',
+    'duplicate_merge' => '0',
+    'ext1' => 'moduleList',
+    'ext2' => NULL,
+    'ext3' => NULL,
+    'ext4' => NULL,
+  ),
+)
+?>

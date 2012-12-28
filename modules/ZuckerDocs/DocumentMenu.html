@@ -1,0 +1,43 @@
+<!-- BEGIN: documentmenu -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td width="20%" style="padding-bottom: 2px;">
+			<form action="download.php" method="post" name="DocumentMenu" id="form" target="_blank">
+				<input type="hidden" name="module" value="ZuckerDocs">
+				<input type="hidden" name="record" value="{ID}">
+				<input type="hidden" name="action">
+				<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+				<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+				<input type="hidden" name="return_id" value="{RETURN_ID}">
+
+				<input class="button" onclick="this.form.return_module.value='ZuckerDocs'; this.form.return_action.value='DocView'; this.form.return_id.value='{ID}'; this.form.action.value='ViewDocument'" type="submit" name="button" value="  {MOD.LBL_DOWNLOAD_DOCUMENT}  ">  
+			</form>
+		</td>
+		<td width="*" style="padding-bottom: 2px;">
+			<form action="index.php" method="post" name="DocumentMenu" id="form">
+				<input type="hidden" name="module" value="ZuckerDocs">
+				<input type="hidden" name="record" value="{ID}">
+				<input type="hidden" name="action">
+				<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+				<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+				<input type="hidden" name="return_id" value="{RETURN_ID}">
+				<!-- BEGIN: detailview -->
+				<input class="button" onclick="this.form.return_module.value='ZuckerDocs'; this.form.return_action.value='DocView'; this.form.return_id.value='{ID}'; this.form.action.value='DocView'" type="submit" name="button" value="  {MOD.LBL_VIEW_METADATA}  ">  
+				<!-- END: detailview -->
+				<!-- BEGIN: quickview -->
+				<input class="button" onclick="this.form.return_module.value='ZuckerDocs'; this.form.return_action.value='DocView'; this.form.return_id.value='{ID}'; this.form.action.value='QuickView'" type="submit" name="button" value="  {MOD.LBL_VIEW_CONTENT}  ">  
+				<!-- END: quickview -->
+				<!-- BEGIN: editmeta -->
+				<input class="button" onclick="this.form.return_module.value='ZuckerDocs'; this.form.return_action.value='DocView'; this.form.return_id.value='{ID}'; this.form.action.value='EditView'" type="submit" name="button" value="  {MOD.LBL_EDIT_METADATA}  ">  
+				<!-- END: editmeta -->
+				<!-- BEGIN: editcontent -->
+				<input class="button" onclick="this.form.return_module.value='ZuckerDocs'; this.form.return_action.value='DocView'; this.form.return_id.value='{ID}'; this.form.action.value='EditContentsView'" type="submit" name="button" value="  {MOD.LBL_EDIT_CONTENT}  ">  
+				<!-- END: editcontent -->
+				<!-- BEGIN: deletedocument -->
+				<input class="button" onclick="this.form.return_module.value='{RETURN_MODULE}'; this.form.return_action.value='{RETURN_ACTION}'; this.form.return_id.value='{RETURN_ID}'; this.form.action.value='DocDelete'; return confirm('{APP.NTC_DELETE_CONFIRMATION}')" type="submit" name="button" value=" {MOD.LBL_DELETE_DOCUMENT} ">
+				<!-- END: deletedocument -->
+			</form>
+		</td>
+	</tr>
+</table>
+<!-- END: documentmenu -->

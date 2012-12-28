@@ -1,0 +1,26 @@
+<graphData title="Pipeline total is 0,00">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="4" kDelim="," prefix="" suffix=""/>
+     <colorLegend status="on">
+          <mapping id="6af92655-389c-99a5-c5e5-4e6dbdcc3ebf" name="sandeepv" color="0xFF0000"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2011-09-13 to 2010-01-01<BR/>Opportunity count in 1 Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0x53539a"  docBg1="0x0b0f41"  docBg2="0x0b0f41"  xText="0x8796a7"  yText="0x8796a7"  title="0x7474b9"  misc="0x879aac"  altBorder="0x253661"  altBg="0x131748"  altText="0x879aac"  graphBorder="0x53539a"  graphBg1="0x253661"  graphBg2="0x000033"  graphLines="0x393a6c"  graphText="0x879aac"  graphTextShadow="0x000000"  barBorder="0x00000c"  barBorderHilite="0xFFFFFF"  legendBorder="0x253661"  legendBg1="0x131748"  legendBg2="0x131748"  legendText="0x879aac"  legendColorKeyBorder="0x000000"  scrollBar="0x253661"  scrollBarBorder="0x393a6c"  scrollBarTrack="0x000033"  scrollBarTrackBorder="0x393a6c"  />
+</graphData>

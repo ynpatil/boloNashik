@@ -1,0 +1,61 @@
+<graphData title="Pipeline total is 0">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="b667f6ad-b236-7128-5453-481956bc306f" name="Abhishek Tiwari" color="0xFF0000"/>
+          <mapping id="ce7ec807-4e54-897b-26d0-481956c8c258" name="Deepesh Gupta" color="0x00FF00"/>
+          <mapping id="e170ba52-bf80-8935-947b-4ca983051fd7" name="Kumar Alap" color="0x0000FF"/>
+          <mapping id="ebc43a3a-1eee-29f5-2bc5-48d743623b11" name="Manisha Kanwal" color="0xFF6600"/>
+          <mapping id="5a890404-3691-ad28-0809-47f2039c6ea3" name="Mansi Chauhan (Arora)" color="0x42FF8E"/>
+          <mapping id="e063df58-288f-8ae2-d10e-481956705f76" name="Monika Singh" color="0x6600FF"/>
+          <mapping id="98b35090-792c-db11-0b83-4ca982ae458e" name="Naveen Rana" color="0xFFFF00"/>
+          <mapping id="c5d60585-5942-92ab-adab-493002e61f33" name="Neeraj Dubey" color="0x00FFFF"/>
+          <mapping id="f1615b8d-486a-3b72-3101-4c3c1e606af1" name="Niharika Sinha" color="0xFF00FF"/>
+          <mapping id="b37cc572-9b2f-e0a6-802e-48109241d9ff" name="Prabhat Kumar" color="0x66FF00"/>
+          <mapping id="d17b23dc-0253-b68d-227e-481956c1e5e7" name="Puneet Shukla" color="0x0066FF"/>
+          <mapping id="8d65f611-5888-c663-8e28-4924fd6dc184" name="Raghav Arora" color="0xFF0066"/>
+          <mapping id="d470b9a2-1ee6-4fcc-3fe1-481956682c46" name="Ragini Gupta" color="0xCC0000"/>
+          <mapping id="9f4ad828-4013-b168-5f79-4c3c207eef66" name="Rajeev Khullar" color="0x00CC00"/>
+          <mapping id="2c9e49bc-9eb2-ec9a-2272-4a93afbb2109" name="Ravi Tahiliani" color="0x0000CC"/>
+          <mapping id="4331538d-65c6-3867-6f5b-4be9000b22a4" name="Shaveta Puri" color="0xCC6600"/>
+          <mapping id="38dc6e72-b337-2531-3f4d-493001f1f622" name="Sneha Mishra" color="0x00CC66"/>
+          <mapping id="e7573822-8535-906a-266b-4b70f34e96b6" name="Subhabrata Bardhan" color="0x6600CC"/>
+          <mapping id="9478a805-abb2-8f42-bb7e-48109156b36b" name="Sucheta Kapoor" color="0xCCCC00"/>
+          <mapping id="3e8830b7-0bc3-2f07-32fc-4dad8d926a6c" name="Sudhir Gupta" color="0x00CCCC"/>
+          <mapping id="23846c9a-7ecc-dafe-8f89-4e0078ec37f4" name="abhishekk1" color="0xd5b85c"/>
+          <mapping id="82c13ec3-9df2-0754-c0fd-481090286a5e" name="abhishekp" color="0x8d4a61"/>
+          <mapping id="96b0bd45-8b10-e1dd-e026-4810910fc5bc" name="amanb" color="0xd91731"/>
+          <mapping id="e1319d5b-07c0-3567-7d3b-4c3c1d7c3517" name="amitg2" color="0x4c857d"/>
+          <mapping id="4e334310-d35a-96fc-3df8-4e1aa3859178" name="anuragr" color="0xd2b6b1"/>
+          <mapping id="17303335-ab3e-1c7b-45e1-4e00774f401e" name="davindert" color="0x11ab78"/>
+          <mapping id="b95ddef8-7ee2-62e9-d011-481956c6ab35" name="emmyg" color="0xedb27f"/>
+          <mapping id="61e6a1d1-e2c7-dbc0-b9e8-48108ce27067" name="girirajs" color="0x27a530"/>
+          <mapping id="9366f389-d39a-f111-925e-4e4b6a656b19" name="harshs" color="0x40d96b"/>
+          <mapping id="1b4e4ad7-d1d6-4d58-fd19-4dbe4108d05d" name="mohitn1" color="0x62959e"/>
+          <mapping id="c48187ba-2f44-3a93-aa40-4e718a28e906" name="nupurp" color="0xb344c1"/>
+          <mapping id="7a8abe7f-b904-388b-ea1a-4819c86d2cd6" name="rakeshprasad" color="0x431fd3"/>
+          <mapping id="9e39da03-60f6-aaa7-2cd9-48195631f480" name="ramitg" color="0x73a605"/>
+          <mapping id="796bfee9-eb1b-f153-f016-48108aa0046c" name="shailajam" color="0x8e65d1"/>
+          <mapping id="9b574861-2601-60bc-0a6c-4e27f5fa127f" name="shubhanig" color="0xbbea8a"/>
+          <mapping id="ab52510f-2b64-f359-3781-4dd22d44cc04" name="yogindery" color="0xafd734"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2012-03-29 to 2010-01-01<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

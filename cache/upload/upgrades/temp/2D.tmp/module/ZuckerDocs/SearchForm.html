@@ -1,0 +1,102 @@
+<!-- BEGIN: buttons -->
+<form name="SwitchView" method="POST" action="index.php">
+	<input type="hidden" name="module" value="ZuckerDocs">
+	<input type="hidden" name="action" value="ListView">
+	<input type="hidden" name="mode">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td style="padding-bottom: 2px;">
+			<input title="{MOD.LBL_METASEARCH_BUTTON_TITLE}" class="button" onclick="this.form.mode.value='meta';" type="submit" name="button" value="  {MOD.LBL_METASEARCH_BUTTON_TITLE}  " > 
+			<input title="{MOD.LBL_FULLTEXTSEARCH_BUTTON_TITLE}" class="button" onclick="this.form.mode.value='fulltext';" type="submit" name="button" value="  {MOD.LBL_FULLTEXTSEARCH_BUTTON_TITLE}  ">
+		</td>
+	</tr>
+</table>
+</form>
+<!-- END: buttons -->
+
+
+<!-- BEGIN: meta -->
+<script type="text/javascript" src="include/javascript/popup_parent_helper.js"></script>
+<form name="EditView" method="GET" action="index.php">
+	<input type="hidden" name="action" value="ListView"/>
+	<input type="hidden" name="module" value="ZuckerDocs"/>
+	<input type="hidden" name="mode" value="meta"/>
+	<input type="hidden" name="querymode" value="meta"/>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="tabForm">
+<tr><td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_LIST_PARENT}</slot></td>
+		<td colspan="3" class="tabDetailViewDF"><slot><select name='parent_module' onChange="javascript:moduleChanged();">{TYPE_OPTIONS}</select><input name='parent_id' type="hidden" value='{PARENT_ID}'><input name='parent_name' readonly type='text' value="{PARENT_NAME}"><input title="{APP.LBL_CHANGE_BUTTON_TITLE}" type="button" class="button" value="{APP.LBL_CHANGE_BUTTON_LABEL}" name='parent_button' onclick='open_popup(document.EditView.parent_module.value, 600, 400, "", true, false, {encoded_popup_request_data});'/></slot></td>
+	</tr><tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_FILE}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot><input type=text size="40" name="filename" class=dataField value="{FILENAME}"></slot></td>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_CATNAME}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot><select class="dataField" name="cat_name">{CATNAME_OPTIONS}</select></slot></td>
+	</tr><tr>
+		<td colspan="4" align="left">
+			<input title="{APP.LBL_SEARCH_BUTTON_TITLE}" accessKey="{APP.LBL_SEARCH_BUTTON_KEY}" class="button" type="submit" name="button" value="{APP.LBL_SEARCH_BUTTON_LABEL}"/>
+			<input title="{APP.LBL_CLEAR_BUTTON_TITLE}" accessKey="{APP.LBL_CLEAR_BUTTON_KEY}" onclick="clear_form(this.form);" class="button" type="button" name="clear" value=" {APP.LBL_CLEAR_BUTTON_LABEL} "/>
+		</td>
+	</tr>
+	</table>
+</td></tr>
+</table>
+</form>
+
+<script type='text/javascript' language='JavaScript'>
+
+if (document.EditView.parent_module.value == '') {
+	document.EditView.parent_button.disabled = true;
+} else {
+	document.EditView.parent_button.disabled = false;
+}
+
+
+function moduleChanged() {
+	document.EditView.parent_name.value='';
+	document.EditView.parent_id.value='';
+	if (document.EditView.parent_module.value == '') {
+		document.EditView.parent_button.disabled = true;
+	} else {
+		document.EditView.parent_button.disabled = false;
+	}
+}
+</script>
+{JAVASCRIPT}
+<!-- END: meta -->
+
+<!-- BEGIN: fulltext -->
+<form name="EditView" method="GET" action="index.php">
+	<input type="hidden" name="action" value="ListView"/>
+	<input type="hidden" name="module" value="ZuckerDocs"/>
+	<input type="hidden" name="mode" value="fulltext"/>
+	<input type="hidden" name="querymode" value="fulltext"/>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="tabForm">
+<tr><td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_SEARCHTERM}</slot></td>
+		<td class="tabDetailViewDF"><slot><input type=text size="40" name="searchterm" class=dataField value="{SEARCHTERM}"></slot></td>
+	</tr><tr>
+		<td width="15%" class="tabDetailViewDL"><slot>&nbsp;</slot></td>
+		<td class="tabDetailViewDF"><slot>{MOD.LBL_MSG_BOOLEAN_SEARCH}</slot></td>
+	</tr><tr>
+		<td colspan="2" align="left">
+			<input title="{APP.LBL_SEARCH_BUTTON_TITLE}" accessKey="{APP.LBL_SEARCH_BUTTON_KEY}" class="button" type="submit" name="button" value="{APP.LBL_SEARCH_BUTTON_LABEL}"/>
+			<input title="{APP.LBL_CLEAR_BUTTON_TITLE}" accessKey="{APP.LBL_CLEAR_BUTTON_KEY}" onclick="clear_form(this.form);" class="button" type="button" name="clear" value=" {APP.LBL_CLEAR_BUTTON_LABEL} "/>
+		</td>
+	</tr>
+	</table>
+</td></tr>
+</table>
+</form>
+
+{JAVASCRIPT}
+<!-- END: fulltext -->
+
+
+

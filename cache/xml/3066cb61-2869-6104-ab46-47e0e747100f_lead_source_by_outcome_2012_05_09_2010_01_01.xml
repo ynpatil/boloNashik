@@ -1,0 +1,45 @@
+<graphData title="Pipeline total is 0">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="59ac8cf5-108b-e96f-7360-490ec8887b25" name="Abhijit Rajput" color="0xFF0000"/>
+          <mapping id="66df0762-a83a-679e-eed4-474a6f2e5297" name="Ashok Trivedi" color="0x00FF00"/>
+          <mapping id="196f83af-b524-8b76-4205-476764f99296" name="Jacob Joseph" color="0x0000FF"/>
+          <mapping id="4100dd7a-21b0-a9d5-8497-474a71ee2293" name="Malcolm Fernandes" color="0xFF6600"/>
+          <mapping id="227435ce-4b61-9571-d286-490ecea04056" name="Sarika Vachhani" color="0x42FF8E"/>
+          <mapping id="9ae26f1e-57cc-06f5-1bd8-474a74f053be" name="Suvir Singh" color="0x6600FF"/>
+          <mapping id="a68104f0-b426-1741-1fcc-48bfa3087140" name="Wayne Soares" color="0xFFFF00"/>
+          <mapping id="e71ecb05-ef11-26be-463d-4d9448276aa3" name="ameyam" color="0x00FFFF"/>
+          <mapping id="dbebd033-4999-b990-257f-4e0cb330ffa6" name="jais" color="0xFF00FF"/>
+          <mapping id="6e9f83ec-de2f-5a24-ebd5-474a7210f3de" name="jiteshd" color="0x66FF00"/>
+          <mapping id="81757952-9062-efc8-175b-474a7341576c" name="kunals" color="0x0066FF"/>
+          <mapping id="983c0382-995b-77aa-7421-474a6efcf24b" name="manojy" color="0xFF0066"/>
+          <mapping id="4c0760ba-6695-70e0-56b3-478b2a6a3aed" name="niladrid" color="0xCC0000"/>
+          <mapping id="645c324d-04b1-e37b-9492-4948cce31633" name="rajarshis" color="0x00CC00"/>
+          <mapping id="e1e5eb58-47bc-e108-0048-474a72317f9a" name="santosha" color="0x0000CC"/>
+          <mapping id="bcaaa6f2-9a99-5a9e-cfc6-4cadbd180407" name="sonalip" color="0xCC6600"/>
+          <mapping id="4eddd1b1-4f6b-5488-3405-47e0e607103b" name="stanley" color="0x00CC66"/>
+          <mapping id="e71e9ea1-b447-71f7-7bbf-474a70376e6d" name="virajk" color="0x6600CC"/>
+          <mapping id="3d373849-777a-4db2-fc12-490ed0da94ac" name="vivekd" color="0xCCCC00"/>
+          <mapping id="4b4ce0f8-a1a1-1a50-c0f4-4cd7cc35de95" name="yogeshk1" color="0x00CCCC"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2012-05-09 to 2010-01-01<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

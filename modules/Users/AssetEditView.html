@@ -1,0 +1,25 @@
+<!-- BEGIN: main -->
+
+<form name="SearchView" method="GET" action="index.php">
+		<input type="hidden" name="module" value="Users">
+		<input type="hidden" name="action" value="SaveAccess">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabForm">
+<tr>
+<td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	<td width="15%" class="dataLabel"><slot>{MOD.LBL_LIST_FORM_TITLE} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+	<td width="35%" class="dataField"><slot><select tabindex="1" name='user_options[]' multiple="multiple">{USER_OPTIONS}</select></slot></td>
+	<td width="15%" class="dataLabel"><slot>{MOD.LBL_MODULES} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+	<td width="35%" class="dataField"><slot><select tabindex="2" name='access_modules[]' multiple="multiple">{MODULE_OPTIONS}</select></slot></td>
+	</tr>
+	<tr>
+	<td colspan="4" align="center">
+			<input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " >
+	</td>
+	</tr>
+</table>
+</td></tr></table>
+</form>
+<!-- END: main -->

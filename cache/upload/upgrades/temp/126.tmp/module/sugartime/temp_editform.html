@@ -1,0 +1,54 @@
+<!-- BEGIN: main -->
+<script type="text/javascript" src="include/javascript/popup_parent_helper.js"></script>
+<table width="100%"  border="0" cellspacing="0" cellpadding="10" class="tabForm">
+  <tr>
+    <td>
+	<form name="EditView" method="POST" action="index.php">
+	<input type="hidden" name="module" value="sugartime" />
+	<input type="hidden" name="action" value="index" />
+	<input name="r_id" type="hidden" value="{RID}">
+	<input name="r_userid" type="hidden" value="{USERID}">
+	<input name="r_username" type="hidden" value="{USER}">
+	<table width="100%"  border="0" cellspacing="2" cellpadding="0">
+	  <tr>
+		<td width="17%" align="left"><slot>{MOD.LBL_EDIT_DATE}</slot></td>
+		<td width="17%" align="left"><slot>{MOD.LBL_EDIT_START}</slot></td>
+		<td width="17%" align="left"><slot>{MOD.LBL_EDIT_FINISH}</slot></td>
+		<td width="17%" align="left"><slot>{MOD.LBL_EDIT_DOWNTIME}</slot></td>
+		<td width="17%" align="left"><slot>{MOD.LBL_EDIT_USER}</slot></td>
+		<td width="11%">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td align="left">
+		<slot>
+		<input name='rdate' id='rdate' onblur="parseDate(this, '{CALENDAR_DATEFORMAT}');" tabindex='1' maxlength='10' size='11' {READONLY} type="text" value="{RDATE}">
+		<img src="themes/{THEME}/images/jscalendar.gif" alt="{APP.LBL_ENTER_DATE}"  id="rdate_trigger" align="absmiddle">
+		</slot>
+		</td>
+		<td align="left"><slot><input name='time_start' size='5' maxlength='5' {READONLY} type="text" value='{TIME_START}'>{START_TIME_MERIDIEM}</slot></td>
+		<td align="left"><slot><input name='time_finish' size='5' maxlength='5' {READONLY} type="text" value='{TIME_FINISH}'>{FINISH_TIME_MERIDIEM}</slot></td>
+		<td align="left"><slot><input name='downtime_h' type="text" size='2' maxlength='2' value='{DOWNTIMEH}'>:<input name='downtime_m' type="text" size='2' maxlength='2' value='{DOWNTIMEM}'></slot></td>
+		<td align="left"><slot>{USER}</slot></td>
+		<td align="right"><slot><input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" type="submit" name="button" value="{APP.LBL_SAVE_BUTTON_LABEL}"/></slot></td>
+	  </tr>
+	  <tr>
+	  	<td><span class="dateFormat">{DATE_FORMAT}</span></td>
+		<td><span class="dateFormat">{TIME_FORMAT}</span></td>
+		<td><span class="dateFormat">{TIME_FORMAT}</span></td>
+		<td><span class="dateFormat">(hh:mm)</span></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	  </tr>
+	</table>
+	</form>
+	
+	</td>
+  </tr>
+</table>
+<script type="text/javascript">
+Calendar.setup ({
+	inputField : "rdate", ifFormat : "{CALENDAR_DATEFORMAT}", showsTime : false, button : "rdate_trigger", singleClick : true, step : 1
+});
+</script>
+{JAVASCRIPT}
+<!-- END: main -->

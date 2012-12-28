@@ -1,0 +1,30 @@
+<graphData title="Pipeline total is 10,00">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="6">
+          <bar id="523eac46-71cb-aa55-4652-47f5ed7e266e" totalSize="6" altText="del5: 6 opportunities  where sales stage is Suspecting" url="index.php?module=Opportunities&action=index&assigned_user_id[]=523eac46-71cb-aa55-4652-47f5ed7e266e&sales_stage=Suspecting&date_start=2008-04-21&date_closed=2010-01-01&query=true"/>
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="2">
+          <bar id="523eac46-71cb-aa55-4652-47f5ed7e266e" totalSize="2" altText="del5: 2 opportunities  where sales stage is Prospecting" url="index.php?module=Opportunities&action=index&assigned_user_id[]=523eac46-71cb-aa55-4652-47f5ed7e266e&sales_stage=Prospecting&date_start=2008-04-21&date_closed=2010-01-01&query=true"/>
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="1">
+          <bar id="523eac46-71cb-aa55-4652-47f5ed7e266e" totalSize="1" altText="del5: 1 opportunities  where sales stage is Negotiation/Review" url="index.php?module=Opportunities&action=index&assigned_user_id[]=523eac46-71cb-aa55-4652-47f5ed7e266e&sales_stage=Negotiation%2FReview&date_start=2008-04-21&date_closed=2010-01-01&query=true"/>
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="1">
+          <bar id="523eac46-71cb-aa55-4652-47f5ed7e266e" totalSize="1" altText="del5: 1 opportunities  where sales stage is Closed Won" url="index.php?module=Opportunities&action=index&assigned_user_id[]=523eac46-71cb-aa55-4652-47f5ed7e266e&sales_stage=Closed+Won&date_start=2008-04-21&date_closed=2010-01-01&query=true"/>
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="6" length="4" kDelim="," prefix="" suffix=""/>
+     <colorLegend status="on">
+          <mapping id="523eac46-71cb-aa55-4652-47f5ed7e266e" name="del5" color="0xFF0000"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2008-04-21 to 2010-01-01<BR/>Opportunity count in 1 Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

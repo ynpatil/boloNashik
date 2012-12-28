@@ -1,0 +1,109 @@
+<rss version="2.0">
+	<channel>
+		<title>SourceForge.net: SF.net Project News: SugarCRM </title>
+		<link>http://sourceforge.net/projects/sugarcrm/</link>
+		<description>SF.net Project News: SugarCRM  (sugarcrm project) - SugarCRM v4.5.1 now available! A complete CRM system for businesses of all sizes. Core CRM functionality includes sales force automation, marketing campaigns, support cases, project mgmt, calendaring and more. Built in PHP, supports MySQL and SQL Server.</description>
+		<copyright>Copyright and acceptable usage information for this RSS feed may be found at: http://sourceforge.net/docman/display_doc.php?docid=6048&amp;group_id=1#licensing_and_other_terms</copyright>
+		<lastBuildDate>Wed, 21 Mar 2007 00:36:34 GMT</lastBuildDate>
+		<generator>SourceForge.net RSS generator</generator>
+		<image>
+			<title>SourceForge.net logo</title>
+			<url>http://images.sourceforge.net/images/sflogo-88-1.png</url>
+			<link>http://sourceforge.net/</link>
+			<width>88</width>
+			<height>31</height>
+			<description>The world's largest Open Source software development website</description>
+		</image>
+		<item>
+			<title>Sugar 4.5.1 Patch B Now Available for Download</title>
+			<description>The Sugar Team has released 4.5.1 patch B.&#60;br /&#62;&#60;br /&#62;This patch includes many new bug fixes for email, campaign management, the Outlook Plug-In as well as many other issues. Patch B is a significant patch for Sugar 4.5.1. We highly encourage all customers using Sugar v4.5.1 to upgrade to this patch immediately. (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=676243&#34;&#62;0 comments&#60;/a&#62;)</description>
+			<author>jnassi@users.sourceforge.net (Jason Nassi)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=676243</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=676243</guid>
+			<pubDate>Wed, 21 Mar 2007 00:36:34 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=676243</comments>
+		</item>
+		<item>
+			<title>Sugar DST Patches Now Available for Download</title>
+			<description>Sugar 4.5.1 Patch A, Sugar 4.5.0 Patch I, Sugar 4.2.1 Patch F, Universal DST Update Patch (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=669059&#34;&#62;0 comments&#60;/a&#62;)</description>
+			<author>jnassi@users.sourceforge.net (Jason Nassi)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=669059</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=669059</guid>
+			<pubDate>Sat, 24 Feb 2007 21:00:47 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=669059</comments>
+		</item>
+		<item>
+			<title>Sugar Open Source 4.5.1 GA Available For Download</title>
+			<description>The Sugar Team is pleased to bring you the generally available (GA) release of Sugar Open Source 4.5.1.  SugarCRM is a complete CRM system for businesses of all sizes. Core CRM functionality includes sales force automation, marketing campaigns, support cases, project mgmt, calendaring and more. Built in PHP, supports MySQL and SQL Server. (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=660821&#34;&#62;0 comments&#60;/a&#62;)</description>
+			<author>jnassi@users.sourceforge.net (Jason Nassi)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=660821</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=660821</guid>
+			<pubDate>Fri, 02 Feb 2007 15:10:12 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=660821</comments>
+		</item>
+		<item>
+			<title>Sugar 4.5.1 Release Candidate Now Available for Download</title>
+			<description>Sugar Suite 4.5.1 Release Candidate (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=654927&#34;&#62;0 comments&#60;/a&#62;)</description>
+			<author>andydreisch@users.sourceforge.net (AndyAtSugarCRM)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=654927</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=654927</guid>
+			<pubDate>Mon, 15 Jan 2007 20:31:49 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=654927</comments>
+		</item>
+		<item>
+			<title>Sugar 4.5.0 Patch H Now Available for Download</title>
+			<description>The Sugar Team has released 4.5.0 patch H.&#60;br /&#62;&#60;br /&#62;This patch includes a new bug fix for Roles, and a new default behavior for inbound email security regarding Style tags. We highly encourage all customers using Sugar v4.5.0 to upgrade to this patch immediately. (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=654926&#34;&#62;0 comments&#60;/a&#62;)</description>
+			<author>andydreisch@users.sourceforge.net (AndyAtSugarCRM)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=654926</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=654926</guid>
+			<pubDate>Mon, 15 Jan 2007 20:29:27 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=654926</comments>
+		</item>
+		<item>
+			<title>Sugar 4.5.0 Patch G Now Available for Download</title>
+			<description>Sugar 4.5.0 Patch G (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=645788&#34;&#62;1 comments&#60;/a&#62;)</description>
+			<author>jnassi@users.sourceforge.net (Jason Nassi)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=645788</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=645788</guid>
+			<pubDate>Sat, 16 Dec 2006 02:13:35 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=645788</comments>
+		</item>
+		<item>
+			<title>Sugar Open Source 4.5.0 Patch B Now Available for Download</title>
+			<description>The Sugar Team has released 4.5.0 patch B.&#60;br /&#62;&#60;br /&#62;This patch includes new bug fixes. We encourage all customers using Sugar v4.5.0 to upgrade to this patch immediately. (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=611433&#34;&#62;0 comments&#60;/a&#62;)</description>
+			<author>jnassi@users.sourceforge.net (Jason Nassi)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=611433</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=611433</guid>
+			<pubDate>Thu, 14 Sep 2006 06:50:27 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=611433</comments>
+		</item>
+		<item>
+			<title>Sugar Open Source 4.5 Now Available For Download</title>
+			<description>Sugar Open Source 4.5 GA (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=611223&#34;&#62;0 comments&#60;/a&#62;)</description>
+			<author>sugarclint@users.sourceforge.net (clint)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=611223</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=611223</guid>
+			<pubDate>Tue, 12 Sep 2006 04:57:20 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=611223</comments>
+		</item>
+		<item>
+			<title>Sugar Suite 4.2 Now Available</title>
+			<description>Sugar Open Source 4.2 is now available for immediate download.&#60;br /&#62;&#60;br /&#62;Release 4.2 provides these exciting new features: (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=557525&#34;&#62;0 comments&#60;/a&#62;)</description>
+			<author>jnassi@users.sourceforge.net (Jason Nassi)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=557525</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=557525</guid>
+			<pubDate>Fri, 31 Mar 2006 06:03:24 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=557525</comments>
+		</item>
+		<item>
+			<title>Sugar Open Source 4.0 Available for Download</title>
+			<description>The Sugar Team is excited to bring you the seventh major release of the Sugar Suite. Our goal continues to be to build the customer relationship management system that you have always wanted, so your input is vital. (&#60;a href=&#34;http://sourceforge.net/forum/forum.php?forum_id=520492&#34;&#62;0 comments&#60;/a&#62;)</description>
+			<author>sugarclint@users.sourceforge.net (clint)</author>
+			<link>http://sourceforge.net/forum/forum.php?forum_id=520492</link>
+			<guid isPermaLink="true">http://sourceforge.net/forum/forum.php?forum_id=520492</guid>
+			<pubDate>Tue, 20 Dec 2005 13:04:27 GMT</pubDate>
+			<comments>http://sourceforge.net/forum/forum.php?forum_id=520492</comments>
+		</item>
+	</channel>
+</rss>
+ 	  	 

@@ -1,0 +1,26 @@
+<graphData title="Pipeline total is 0,00">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="4" kDelim="," prefix="" suffix=""/>
+     <colorLegend status="on">
+          <mapping id="60300573-8082-3c92-20e5-47cbdce70654" name="Ajitp" color="0xFF0000"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2008-03-06 to 2010-01-01<BR/>Opportunity count in 1 Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0x7DA7DF"  docBg1="0x4F85C6"  docBg2="0x4F85C6"  xText="0xe7f0fe"  yText="0xe7f0fe"  title="0xe7f0fe"  misc="0xe7f0fe"  altBorder="0x2D62B6"  altBg="0x4d88c6"  altText="0xCEE2F5"  graphBorder="0x4d88c6"  graphBg1="0x7DA7DF"  graphBg2="0xe7f0fe"  graphLines="0x7DA7DF"  graphText="0x1f2e6b"  graphTextShadow="0xe7f0fe"  barBorder="0x7DA7DF"  barBorderHilite="0xe7f0fe"  legendBorder="0x7DA7DF"  legendBg1="0x4d88c6"  legendBg2="0x4d88c6"  legendText="0xe7f0fe"  legendColorKeyBorder="0x2D62B6"  scrollBar="0x999999"  scrollBarBorder="0x777777"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0x777777"  />
+</graphData>

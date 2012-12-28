@@ -1,0 +1,41 @@
+<!-- BEGIN: main -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top: 0px none; margin-bottom: 4px" class="tabForm">
+<tr>
+  <td>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr valign='top'>
+      <td class="dataLabel" noWrap><span sugar='slot1'>{MOD.LBL_TITLE}&nbsp;&nbsp;<input type=text tabindex='1' size="25" name="title_basic" class=dataField  value="{TITLE}" /></span sugar='slot'></td>
+      <td rowspan='2' align="right"></td>
+    </tr>
+
+    <tr>
+      <td class="dataLabel">{APP.LBL_CURRENT_USER_FILTER}&nbsp;&nbsp;<input name='current_user_only_basic' tabindex='1' onchange='this.form.submit();' class="checkbox" type="checkbox" {CURRENT_USER_ONLY}></td>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+  
+  </table>
+</td></tr>
+</table>
+<!-- END: main -->
+
+<!-- BEGIN: advanced -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 0px none; margin-bottom: 4px" class="tabForm">
+<tr>
+<td>
+
+  <table>
+  <tr>
+    <td class="dataLabel"><span sugar='slot3'>{MOD.LBL_TITLE}</span sugar='slot'></td>
+    <td class="dataField"><span sugar='slot3b'><input name='title' tabindex='1' size='25' maxlength='35' type="text" value="{TITLE}"></span sugar='slot'></td>
+  </tr>
+  <tr>
+    <td class="dataLabel"><span sugar='slot3'>{MOD.LBL_CREATED_BY}</span sugar='slot'></td>
+    <td class="dataField"><span sugar='slot19b'><select size="3" tabindex='2' name='created_by[]' multiple="multiple">{USER_FILTER}</select></span sugar='slot'></td>
+
+  </tr>
+  </table>
+
+</td>
+</tr>
+</table>
+<!-- END: advanced -->

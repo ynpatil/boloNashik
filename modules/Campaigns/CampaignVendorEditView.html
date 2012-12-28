@@ -1,0 +1,100 @@
+<!--
+/*********************************************************************************
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004-2006 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ ********************************************************************************/
+/*********************************************************************************
+
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+{ERROR_STRING}
+<script type="text/javascript" src="include/javascript/popup_parent_helper.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<form name="CampaignVendorEditView" method="POST" action="index.php">
+	<input type="hidden" name="module" value="Campaigns">
+	<input type="hidden" name="campaign_id" value="{ID}">
+        <input type="hidden" name="record" value="{ID}">
+	<input type="hidden" name="action">
+	<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+	<input type="hidden" name="return_id" value="{RETURN_ID}">
+	<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td style="padding-bottom: 2px;"><input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="this.form.action.value='SaveCampaignVendor'; return checkVendorPercentage()" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " > 
+                            <input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+                        </td>
+			<td align="right" nowrap><span class="required">{APP.LBL_REQUIRED_SYMBOL}</span> {APP.NTC_REQUIRED}</td>
+			<td align='right'>{ADMIN_EDIT}</td>
+		</tr>
+	</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabForm">
+<tr>
+<td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="30%" class="dataLabel"><span sugar='slot11'><b>{MOD.LBL_VENDORS_SUBPANEL_TITLE}</b></span sugar='slot'></td>
+                <td width="30%" class="dataLabel"><span sugar='slot12'><b>{MOD.LBL_LIST_PERCENTAGE}</b></span sugar='slot'></td>
+            </tr>
+            <!-- BEGIN: CampaignVendor --> 
+            
+                
+	<tr>	
+	<td class="dataField"><span sugar='slot11b'>{VENDOR_NAME}</span sugar='slot'></td>	
+        <td class="dataField"><span sugar='slot12b'><input name="percentage[]" id="percentage_{CAMP_COUNT}" value="{PERSANTAGE}" size="7" maxlength="5">%</span sugar='slot'></td>
+	<input type="hidden" name="id[]" value="{CAMP_VENDOR_ID}"><input type="hidden" name="vendor_id[]" value="{VENDOR_ID}">
+        </tr>
+        <!-- END: CampaignVendor -->
+        <input type="hidden" name="rec_count" id="rec_count" value="{CAMP_COUNT}">
+	</table>
+</td>
+</tr>
+</table>
+<div style="padding-top: 2px">
+	<input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="this.form.action.value='SaveCampaignVendor'; return checkVendorPercentage()" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " > <input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+</div>
+</form>
+
+{JAVASCRIPT}
+	
+<script type="text/javascript">
+    //This function used for check percentage of all records
+	function checkVendorPercentage(){
+            
+            var rec_count = document.getElementById('rec_count').value;            
+            var i;
+            var total=0;
+            
+            for (i=0;i<=rec_count;i++){
+                total = parseInt(total) +  parseInt(document.getElementById('percentage_'+i).value);                
+            }
+            
+            if(total > 100){
+                alert("The total not more than 100%");                
+                return false;
+            }else{
+                return true;                
+            }            
+        }
+</script>
+
+
+<!-- END: main -->

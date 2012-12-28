@@ -1,0 +1,59 @@
+<graphData title="Pipeline total is 0">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="9604c518-0d43-50c4-b38d-47e8c32d9aaf" name="Amandeep Singh Ahuja" color="0xFF0000"/>
+          <mapping id="751ac3f6-d26a-b4e1-bc1c-4d3521151037" name="Amit Gandhi" color="0x00FF00"/>
+          <mapping id="305f0935-afd7-4234-94eb-485f5cbf3b44" name="Amit Sood" color="0x0000FF"/>
+          <mapping id="3f5bf373-e6f4-64ed-2a1e-47e8c3c08dd2" name="Arun Sharma" color="0xFF6600"/>
+          <mapping id="e2bed063-e508-e6db-305f-47e8c427a135" name="Ashish Mathur" color="0x42FF8E"/>
+          <mapping id="7f385269-3002-e583-9e4f-4875f49314d2" name="Bipin Kumar" color="0x6600FF"/>
+          <mapping id="484331b3-0807-79dd-d181-47e8d399f992" name="Gagan Malik" color="0xFFFF00"/>
+          <mapping id="947c6da4-95bb-538b-cc96-47e8c9ae0581" name="Gaurav Khanna" color="0x00FFFF"/>
+          <mapping id="45115d36-b8fe-705f-6439-47e8c21a9ebc" name="Harmit Singh Sabharwal" color="0xFF00FF"/>
+          <mapping id="cea4a3df-87ac-2af3-394b-4e27fc54ef3b" name="Jasima Singh" color="0x66FF00"/>
+          <mapping id="9b730779-a71b-d20d-18a8-47e8c8c1a712" name="Jaspreet Singh" color="0x0066FF"/>
+          <mapping id="8a8ac812-fc3f-874b-71ab-4b85028718d5" name="Joy Banerjee" color="0xFF0066"/>
+          <mapping id="61014756-3877-74db-34a3-47e8cc7a5336" name="Junaid Manzoor" color="0xCC0000"/>
+          <mapping id="ecd6c210-2bcb-4286-b3f6-47e8a31d65f6" name="Manojr" color="0x00CC00"/>
+          <mapping id="5d29e993-f12c-2c62-7263-47e8ca45c356" name="Munish Sharma" color="0x0000CC"/>
+          <mapping id="92c2cd79-36c3-6514-3fa5-4e27fdde9d6e" name="Piyush Sinha" color="0xCC6600"/>
+          <mapping id="6f0e777a-64a9-4580-454a-47e8c6c10285" name="Prakul Vashist" color="0x00CC66"/>
+          <mapping id="b3222c7d-a5a5-0921-0ccb-4b6c0438b704" name="Prashant Kumar" color="0x6600CC"/>
+          <mapping id="6cb5a9f8-e1b1-7838-f5f5-4af7b9995753" name="Prashant Sharma" color="0xCCCC00"/>
+          <mapping id="751700e0-bbb0-d1ff-b743-47e8a49943d6" name="Rajat Pandey" color="0x00CCCC"/>
+          <mapping id="107b4fdc-a728-3cc6-e58f-49476e2b2e37" name="Renuka Panickar" color="0x86f81d"/>
+          <mapping id="4fb1cb6d-7ea1-a8b0-1cfa-48dc7af3061c" name="Shikha Khera" color="0xd75026"/>
+          <mapping id="ec5679f0-0217-e0ef-4f1a-47e8ca21d59d" name="Siddharth Kapoor" color="0x3e59e7"/>
+          <mapping id="a67073ec-51e8-565f-785d-47e8cb03d2fa" name="Vikas Sharma" color="0x3c8187"/>
+          <mapping id="875ab8cc-1e67-2886-5af2-47da42c2f4cf" name="Vishal Guleri" color="0xa7aa13"/>
+          <mapping id="e30e5815-0776-1f8e-dcba-47e8ce5ad897" name="Vivek Arora" color="0xe27c38"/>
+          <mapping id="a55cae3a-01f3-c3c0-3207-47e8aa08198d" name="harpreets" color="0x3da2c2"/>
+          <mapping id="6977ecfd-2e4e-af34-afad-47e8a800b30e" name="manishmalhotra" color="0xc93dba"/>
+          <mapping id="d21e0f5d-5391-1d1a-2639-48d0c3f814af" name="praveenb" color="0x973eb4"/>
+          <mapping id="a5ba3d08-819d-f7cb-af32-47e8a3ebf42f" name="raviv" color="0xf80fa4"/>
+          <mapping id="988eef6c-1df1-f8df-03dd-47e8acd42b55" name="rituk" color="0x2e15b1"/>
+          <mapping id="178acc34-020d-b56f-27b6-47e8a5a6b636" name="sandeeps" color="0x7b13ed"/>
+          <mapping id="78f963f8-6090-3cc5-5fdb-47e8ced6d106" name="vishalsarin" color="0xb2b0a5"/>
+          <mapping id="9108b3f8-cd28-5143-a68c-47e8cd6f535c" name="vishavs" color="0x721a6a"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2012-02-03 to 2010-01-01<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

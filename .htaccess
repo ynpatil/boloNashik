@@ -1,0 +1,32 @@
+# BEGIN SUGARCRM RESTRICTIONS
+RedirectMatch /bsugarcrm45b/sugarcrm.log.* http://localhost/bsugarcrm45b/log_file_restricted.html
+RedirectMatch /bsugarcrm45b/emailman.log http://localhost/bsugarcrm45b/log_file_restricted.html
+RedirectMatch /bsugarcrm45b/not_imported_(.*).txt http://localhost/bsugarcrm45b/log_file_restricted.html
+RedirectMatch /bsugarcrm45b/XTemplate/(.*)/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/data/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/examples/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/include/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/include/(.*)/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/log4php/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/log4php/(.*)/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/metadata/(.*)/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/modules/(.*)/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/soap/(.*).php http://localhost/bsugarcrm45b/index.php
+RedirectMatch /bsugarcrm45b/emailmandelivery.php http://localhost/bsugarcrm45b/index.php
+# END SUGARCRM RESTRICTIONS
+# BEGIN SUGARCRM RESTRICTIONS
+RedirectMatch /sugarcrm45b/sugarcrm.log.* http://localhost/sugarcrm45b/log_file_restricted.html
+RedirectMatch /sugarcrm45b/emailman.log http://localhost/sugarcrm45b/log_file_restricted.html
+RedirectMatch /sugarcrm45b/not_imported_(.*).txt http://localhost/sugarcrm45b/log_file_restricted.html
+RedirectMatch /sugarcrm45b/XTemplate/(.*)/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/data/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/examples/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/include/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/include/(.*)/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/log4php/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/log4php/(.*)/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/metadata/(.*)/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/modules/(.*)/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/soap/(.*).php http://localhost/sugarcrm45b/index.php
+RedirectMatch /sugarcrm45b/emailmandelivery.php http://localhost/sugarcrm45b/index.php
+# END SUGARCRM RESTRICTIONS

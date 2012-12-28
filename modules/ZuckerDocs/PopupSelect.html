@@ -1,0 +1,34 @@
+<!-- BEGIN: subfolders -->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" class="listView">
+	<tr height="20">
+		<td scope="col" class="listViewThS1" nowrap><slot>{MOD.LBL_FOLDER_NAME}</slot></td>
+	</tr>
+	<!-- BEGIN: row -->
+	<tr height="20"  onmouseover="setPointer(this, '{FOLDER.ID}', 'over', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmouseout="setPointer(this, '{FOLDER.ID}', 'out', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmousedown="setPointer(this, '{FOLDER.ID}', 'click', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');">
+		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot><a href="index.php?module=ZuckerDocs&action=PopupSelect&record={FOLDER.ID}&form={FORM}" class="listViewTdLinkS1">{FOLDER.NAME}</a></slot></td>
+	</tr>
+	<tr>
+		<td colspan="20" class="listViewHRS1"></td>
+	</tr>
+<!-- END: row -->
+	</table>
+<!-- END: subfolders -->
+
+<!-- BEGIN: documents -->
+{SET_RETURN_JS}
+<table cellpadding="0" cellspacing="0" width="100%" border="0" class="listView">
+	<tr height="20">
+		<td scope="col" width="35%" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_NAME}</a></slot></td>
+		<td scope="col" width="*" class="listViewThS1" nowrap><slot>{MOD.LBL_LIST_STATUS}</slot></td>
+	</tr>
+	<!-- BEGIN: row -->
+	<tr height="20"  onmouseover="setPointer(this, '{DOCUMENT.ID}', 'over', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmouseout="setPointer(this, '{DOCUMENT.ID}', 'out', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');" onmousedown="setPointer(this, '{DOCUMENT.ID}', 'click', '{BG_COLOR}', '{BG_HILITE}', '{BG_CLICK}');">
+ 		<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot><a href="a" class="listViewTdLinkS1" LANGUAGE=javascript onclick='set_return("{DOCUMENT.ID}", "{DOCUMENT.NAME}"); window.close()'><img border="0" src="{DOCUMENT.ICON_PATH}"/> {DOCUMENT.NAME}</a></slot></td>
+    	<td class="{ROW_COLOR}S1" bgcolor="{BG_COLOR}"><slot>{DOCUMENT.STATUS} - {DOCUMENT.VERSION}</slot></td>
+	</tr>
+	<tr>
+		<td colspan="20" class="listViewHRS1"></td>
+	</tr>
+<!-- END: row -->
+	</table>
+<!-- END: documents -->

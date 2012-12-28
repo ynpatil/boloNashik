@@ -1,0 +1,26 @@
+<!-- BEGIN: main -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="tabForm">
+<tr><td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<form>
+		<!--<td class="dataLabel" noWrap><slot>{MOD.LBL_PNUM}&nbsp;&nbsp;<input type=text size="10" name="pnum" class=dataField  value="{PNUM}" /></slot></td>-->
+		<td class="dataLabel" noWrap><slot>{MOD.LBL_NAME}&nbsp;&nbsp;<input type=text size="10" name="name" class=dataField  value='{NAME}' /></slot></td>
+		<!--<td class="dataLabel" noWrap><slot>{MOD.LBL_CATEGORY}&nbsp;&nbsp;<SELECT NAME="category">{CATEGORY_OPTIONS}</SELECT></slot></td> -->
+		<td class="dataLabel"><!--<slot>{APP.LBL_CURRENT_USER_FILTER}&nbsp;&nbsp;<!--<input name='current_user_only' onchange='this.form.submit();' class="checkbox" type="checkbox" {CURRENT_USER_ONLY}></slot>--></td>
+		
+		<td rowspan='2' align="right">
+		<input type="hidden" name="action" value="index"/>
+		<input type="hidden" name="query" value="true"/>
+		<input type="hidden" name="module" value="TeamsOS" />
+		<input title="{APP.LBL_SEARCH_BUTTON_TITLE}" accessKey="{APP.LBL_SEARCH_BUTTON_KEY}" class="button" type="submit" name="button" value="{APP.LBL_SEARCH_BUTTON_LABEL}"/>
+		<input title="{APP.LBL_CLEAR_BUTTON_TITLE}" accessKey="{APP.LBL_CLEAR_BUTTON_KEY}" onclick="clear_form(this.form);" class="button" type="button" name="clear" value=" {APP.LBL_CLEAR_BUTTON_LABEL} "/>
+		
+		</td>
+	</tr>
+</form>
+	</table>
+</td>
+</tr></table>
+{JAVASCRIPT}
+<!-- END: main -->

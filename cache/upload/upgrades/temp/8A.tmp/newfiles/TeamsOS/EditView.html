@@ -1,0 +1,35 @@
+
+<!-- BEGIN: main -->
+<script type="text/javascript" src="include/javascript/popup_parent_helper.js"></script>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" >
+<tr>
+<form name="EditView" method="post" enctype="multipart/form-data" action="index.php" >
+			<input type="hidden" name="module" value="TeamsOS">
+			<input type="hidden" name="id" value="{ID}">
+			<input type="hidden" name="action">
+			<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+			<input type="hidden" name="return_id" >
+			<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+			<input type='hidden' name='record' value='{ID}'>
+	<td style="padding-bottom: 2px;">
+	<input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="this.form.action.value='Save';return check_form('EditView');" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " > 
+
+	<input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  "></td>
+</tr></table>
+<p>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tabForm">
+<tr><th align="left" class="dataField" colspan="4"><h4 class="dataLabel"><slot>{MOD.LBL_PRODUCT_INFORMATION}</slot></h4></th></tr>
+<tr>
+<td width="15%" class="dataLabel" nowrap><slot> {MOD.LBL_NAME}:<span class="required">{APP.LBL_REQUIRED_SYMBOL}</span> </slot></td>
+<td width="35%" class="dataField"><slot><input name='name' tabindex='1' size='30' maxlength='50' type="text" value="{NAME}"></slot></td>
+</tr>
+<tr>
+<td width="15%" class="dataLabel" nowrap><slot> {MOD.LBL_PRIVATE}:<span class="required">{APP.LBL_REQUIRED_SYMBOL}</span> </slot></td>
+<td width="35%" class="dataField"><slot><input name='private' tabindex='2' type="checkbox" value="1" {PRIVATE}></slot></td>
+</tr>
+</table>
+</p>
+</form>
+
+{JAVASCRIPT}
+<!-- END: main -->

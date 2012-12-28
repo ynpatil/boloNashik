@@ -1,0 +1,39 @@
+<graphData title="Campaign Call Response From Vendor: Vendor1">
+     <yData defaultAltText="Total Targeted 1123">
+          <dataRow title="Planned" endLabel="1123">
+<bar id="Planned" totalSize="1123" altText=" Total Targeted 1123. Planned 1123" url="#Planned" color=""/>
+          </dataRow>
+          <dataRow title="Held" endLabel="H">
+          </dataRow>
+          <dataRow title="Not Held" endLabel="N">
+          </dataRow>
+          <dataRow title="Not Interested" endLabel="n">
+          </dataRow>
+          <dataRow title="Ringing No Response" endLabel="r">
+          </dataRow>
+          <dataRow title="Sale" endLabel="S">
+          </dataRow>
+          <dataRow title="Wrong Number" endLabel="w">
+          </dataRow>
+          <dataRow title="Do Not Call" endLabel="d">
+          </dataRow>
+          <dataRow title="Call Back/Scheduled call Back" endLabel="c">
+          </dataRow>
+     </yData>
+     <xData min="0" max="2000" length="10" prefix="" suffix=""/>
+     <colorLegend status="on">
+          <mapping id="Planned" name="Planned" color="0xFF0000"/>
+          <mapping id="Held" name="Held" color="0x00FF00"/>
+          <mapping id="Not Held" name="Not Held" color="0x0000FF"/>
+          <mapping id="not_interested" name="Not Interested" color="0xFF6600"/>
+          <mapping id="ringing_no_response" name="Ringing No Response" color="0x42FF8E"/>
+          <mapping id="Sale" name="Sale" color="0x6600FF"/>
+          <mapping id="wrong_number" name="Wrong Number" color="0xFFFF00"/>
+          <mapping id="do_not_call" name="Do Not Call" color="0x00FFFF"/>
+          <mapping id="call_back" name="Call Back/Scheduled call Back" color="0xFF00FF"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[ ]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

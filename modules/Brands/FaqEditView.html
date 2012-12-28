@@ -1,0 +1,102 @@
+<!--
+/*********************************************************************************
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004-2006 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ ********************************************************************************/
+-->
+<!-- $Id: EditView.html,v 1.64 2006/08/29 04:37:45 majed Exp $ -->
+<!-- BEGIN: main -->
+<script type="text/javascript" src="include/javascript/popup_parent_helper.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script type='text/javascript' src='include/javascript/yui/connection.js'></script>
+{SITEURL}
+{TREEHEADER}
+{SET_RETURN_JS}
+<script>
+function MyFaq(faq_id){
+    document.getElementById(faq_id).readOnly = false;
+    document.getElementById(faq_id).style.backgroundColor="#ffffff";
+    
+    //alert("Pankaj");
+}
+function SaveMyFaq(faq_id){
+ 
+     
+     var ID = document.getElementById('brand_id').value;
+     var faq = document.getElementById('faq').value;
+    
+            var callback = {
+                success: function(data) {
+                    var result = eval(data.responseText);
+                    document.getElementById('responce_id').innerHTML = result['body'];
+                }
+            }
+            var connectionObject = YAHOO.util.Connect.asyncRequest ("GET", "index.php?module=Brands&action=SaveFaq&brand_id="+ID+"&flag=Ajax&id="+ID+"&faq="+faq, callback);
+            
+    document.getElementById(faq_id).readOnly = true;
+    document.getElementById(faq_id).style.backgroundColor="#FAFAFA";
+}    
+</script>
+<p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td align="left" style="padding-bottom: 2px;">
+            <form name="EditView" method="POST" action="index.php">
+                <input type="hidden" name="module" value="Brands">
+                <input type="hidden" name="record"  value="{ID}">                
+                <input type="hidden" name="action">
+                <input type="hidden" name="case_id" value="{CASE_ID}">
+                <input type="hidden" name="bug_id" value="{BUG_ID}">
+                <input type="hidden" name="email_id" value="{EMAIL_ID}">
+                <input type="hidden" name="return_module" value="{RETURN_MODULE}">
+                <input type="hidden" name="return_id" value="{RETURN_ID}">
+                <input type="hidden" name="return_action" value="{RETURN_ACTION}">
+                <input type="hidden" id="prod_hier_id" name="prod_hier_id" value="{PROD_HIER_ID}">
+                <input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="this.form.action.value='SaveFaq';return check_form('EditView')" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " >
+                <input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='DetailView'; this.form.module.value='Brands'; this.form.record.value='{ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+                <label id="responce_id"></label>
+                </td>
+
+                <td align="right" nowrap><span class="required">{APP.LBL_REQUIRED_SYMBOL}</span> {APP.NTC_REQUIRED}</td>
+                <td align="right">{ADMIN_EDIT}</td>
+    </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  class="tabForm">
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="10%" valign="top" class="dataLabel"><span sugar='slot1'></span sugar='slot'></td>
+                    <td width="90%" valign="top" class="dataField"><span sugar='slot1b'<!--Double click below for edit--></span sugar='slot'></td>
+                </tr>
+                <tr>
+                    <td width="10%" valign="top" class="dataLabel"><span sugar='slot1'>{MOD.LBL_FAQ} </span sugar='slot'></td>
+                    <td width="90%" valign="top" class="dataField"><span sugar='slot1b'><textarea name='faq' rows="9" tabindex='7' cols="90"  id="faq"  style="background-color: #FAFAFA">{FAQ}</textarea></teaxarea></span sugar='slot'></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</p>
+</p>
+<input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="this.form.action.value='SaveFaq';" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " >
+<input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='DetailView'; this.form.module.value='Brands'; this.form.record.value='{ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+</form>
+
+{JAVASCRIPT}
+<!-- END: main -->

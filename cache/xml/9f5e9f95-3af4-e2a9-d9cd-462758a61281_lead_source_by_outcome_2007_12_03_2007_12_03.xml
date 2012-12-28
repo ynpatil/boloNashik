@@ -1,0 +1,63 @@
+<graphData title="Total of all opportunities is 78">
+     <yData defaultAltText="Rollover a bar for details.">
+          <dataRow title="None" endLabel="N">
+          </dataRow>
+          <dataRow title="Cold Call" endLabel="1">
+               <bar id="Other" totalSize="1" altText="1 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Cold Call&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Existing Customer" endLabel="36">
+               <bar id="Other" totalSize="33" altText="33 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Existing Customer&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+               <bar id="Closed Lost" totalSize="1" altText="1 opportunities  where outcome is Closed Lost" url="index.php?module=Opportunities&action=index&lead_source=Existing Customer&sales_stage=Closed+Lost&query=true&searchFormTab=advanced_search"/>
+               <bar id="Closed Won" totalSize="2" altText="2 opportunities  where outcome is Closed Won" url="index.php?module=Opportunities&action=index&lead_source=Existing Customer&sales_stage=Closed+Won&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Self Generated" endLabel="18">
+               <bar id="Other" totalSize="16" altText="16 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Self Generated&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+               <bar id="Closed Won" totalSize="2" altText="2 opportunities  where outcome is Closed Won" url="index.php?module=Opportunities&action=index&lead_source=Self Generated&sales_stage=Closed+Won&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Employee" endLabel="4">
+               <bar id="Closed Won" totalSize="1" altText="1 opportunities  where outcome is Closed Won" url="index.php?module=Opportunities&action=index&lead_source=Employee&sales_stage=Closed+Won&query=true&searchFormTab=advanced_search"/>
+               <bar id="Other" totalSize="3" altText="3 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Employee&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Partner" endLabel="P">
+          </dataRow>
+          <dataRow title="Public Relations" endLabel="2">
+               <bar id="Other" totalSize="2" altText="2 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Public Relations&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Direct Mail" endLabel="D">
+          </dataRow>
+          <dataRow title="Conference" endLabel="1">
+               <bar id="Other" totalSize="1" altText="1 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Conference&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Trade Show" endLabel="2">
+               <bar id="Other" totalSize="2" altText="2 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Trade Show&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Web Site" endLabel="2">
+               <bar id="Other" totalSize="2" altText="2 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Web Site&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Word of mouth" endLabel="6">
+               <bar id="Other" totalSize="5" altText="5 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Word of mouth&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+               <bar id="Closed Won" totalSize="1" altText="1 opportunities  where outcome is Closed Won" url="index.php?module=Opportunities&action=index&lead_source=Word of mouth&sales_stage=Closed+Won&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Email" endLabel="E">
+          </dataRow>
+          <dataRow title="Other" endLabel="1">
+               <bar id="Other" totalSize="1" altText="1 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Other&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Competitor Information" endLabel="2">
+               <bar id="Other" totalSize="2" altText="2 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Competitor Information&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Other Media" endLabel="3">
+               <bar id="Other" totalSize="3" altText="3 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Other Media&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+     </yData>
+     <xData min="0" max="40" length="10" kDelim="," prefix="" suffix=""/>
+     <colorLegend status="on">
+          <mapping id="Closed Lost" name="Closed Lost" color="0xFF0000"/>
+          <mapping id="Closed Won" name="Closed Won" color="0x00FF00"/>
+          <mapping id="Other" name="Other" color="0x0000FF"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Opportunity count in 1K]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

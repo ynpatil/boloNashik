@@ -1,0 +1,47 @@
+<graphData title="Total of all opportunities is 1">
+     <yData defaultAltText="Rollover a bar for details.">
+          <dataRow title="None" endLabel="N">
+          </dataRow>
+          <dataRow title="Cold Call" endLabel="C">
+          </dataRow>
+          <dataRow title="Existing Customer" endLabel="E">
+          </dataRow>
+          <dataRow title="Self Generated" endLabel="S">
+          </dataRow>
+          <dataRow title="Employee" endLabel="E">
+          </dataRow>
+          <dataRow title="Partner" endLabel="P">
+          </dataRow>
+          <dataRow title="Public Relations" endLabel="P">
+          </dataRow>
+          <dataRow title="Direct Mail" endLabel="D">
+          </dataRow>
+          <dataRow title="Conference" endLabel="C">
+          </dataRow>
+          <dataRow title="Trade Show" endLabel="T">
+          </dataRow>
+          <dataRow title="Web Site" endLabel="W">
+          </dataRow>
+          <dataRow title="Word of mouth" endLabel="1">
+               <bar id="Other" totalSize="1" altText="1 opportunities  where outcome is Other" url="index.php?module=Opportunities&action=index&lead_source=Word of mouth&sales_stage=Other&query=true&searchFormTab=advanced_search"/>
+          </dataRow>
+          <dataRow title="Email" endLabel="E">
+          </dataRow>
+          <dataRow title="Other" endLabel="O">
+          </dataRow>
+          <dataRow title="Competitor Information" endLabel="C">
+          </dataRow>
+          <dataRow title="Other Media" endLabel="O">
+          </dataRow>
+     </yData>
+     <xData min="0" max="1" length="10" kDelim="," prefix="" suffix=""/>
+     <colorLegend status="on">
+          <mapping id="Closed Lost" name="Closed Lost" color="0xFF0000"/>
+          <mapping id="Closed Won" name="Closed Won" color="0x00FF00"/>
+          <mapping id="Other" name="Other" color="0x0000FF"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Opportunity count in 1K]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

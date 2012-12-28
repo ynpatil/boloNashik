@@ -1,0 +1,32 @@
+<graphData title="Pipeline total is 0">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="59ac8cf5-108b-e96f-7360-490ec8887b25" name="abhijitr" color="0xFF0000"/>
+          <mapping id="66df0762-a83a-679e-eed4-474a6f2e5297" name="ashokt" color="0x00FF00"/>
+          <mapping id="983c0382-995b-77aa-7421-474a6efcf24b" name="manojy" color="0x0000FF"/>
+          <mapping id="9ae26f1e-57cc-06f5-1bd8-474a74f053be" name="suvirs" color="0xFF6600"/>
+          <mapping id="e71e9ea1-b447-71f7-7bbf-474a70376e6d" name="virajk" color="0x42FF8E"/>
+          <mapping id="3d373849-777a-4db2-fc12-490ed0da94ac" name="vivekd" color="0x6600FF"/>
+          <mapping id="a68104f0-b426-1741-1fcc-48bfa3087140" name="waynes" color="0xFFFF00"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2010-11-22 to 2010-01-01<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

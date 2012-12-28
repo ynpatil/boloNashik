@@ -1,0 +1,107 @@
+<!--
+/*********************************************************************************
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ ********************************************************************************/
+/*********************************************************************************
+ * {APP.LBL_CURRENCY_SYM}Header: /cvsroot/sugarcrm/sugarcrm/modules/Accounts/EditView.html,v 1.16 2004/07/16 00:42:57 sugarclint Exp {APP.LBL_CURRENCY_SYM}
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+<form name="EditView" method="POST" action="index.php" id="EditView">
+<p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+	<td align="left" style="padding-bottom: 2px;">
+			<input type="hidden" name="module" value="SAPAccounts">
+			<input type="hidden" name="record" value="{ID}">
+			<input type="hidden" name="action" value="Save">
+			<input type="hidden" name="source" value="{SOURCE}">
+			<input type="hidden" name="caction" value="{CACTION}">
+			<input type="hidden" name="target" value="{TARGET}">
+			<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+			<input type="hidden" name="return_id" value="{RETURN_ID}">
+			<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+			<input title="{APP.LBL_SELECT_BUTTON_TITLE}" accessKey="{APP.LBL_SELECT_BUTTON_KEY}" class="button" onclick="this.form.action.value='Save';return check_form('EditView')" type="submit" name="Save" value="  {APP.LBL_SELECT_BUTTON_LABEL}  " {DISABLED}>
+			<input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="window.close();return false;" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+			</td>
+	<td align="right" nowrap><span class="required">{APP.LBL_REQUIRED_SYMBOL}</span> {APP.NTC_REQUIRED}</td>
+	<td align="right">{ADMIN_EDIT}</td>
+</tr>
+</table>
+</p>
+
+<p>
+
+	<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0" class="tabForm">
+	<tr>
+	<td width="15%" valign="top" class="dataLabel"><slot>{MOD.LBL_SAP_ACCOUNT_CODE}</slot></td>
+	<td width="35%" valign="top"  class="dataField"><slot><input type="text" id="GP_REF" name="gp_ref" onfocus="blur()" size="20" value="{GP_REF}"/> </slot></td>
+	<td width="15%" valign="top" class="dataLabel"><slot>{MOD.LBL_ACCOUNT_NAME}</slot></td>
+	<td width="35%" valign="top"  class="dataField"><slot><input type="text" name="name1" onfocus="blur()" size="40" value="{NAME1}"/></slot></td>
+	</tr><tr>
+	<td  valign="top" class="dataLabel"><slot>{MOD.LBL_EMAIL}</slot></td>
+	<td  valign="top"  class="dataField"><slot><input type="text" name="ispemail" onfocus="blur()" size="50" value="{ISPEMAIL}"/></slot></td>
+	<td  valign="top" class="dataLabel"><slot>{MOD.LBL_FAX}</slot></td>
+	<td  valign="top"  class="dataField"><slot><input type="text" name="telfx" onfocus="blur()" size="30" value="{TELFX}"/></slot></td>
+	</tr>
+	<tr>
+	<td width="15%" valign="top" class="dataLabel"><slot>{MOD.LBL_PHONE}</slot></td>
+	<td width="35%" valign="top"  class="dataField"><slot><input type="text" name="ispteld" onfocus="blur()" size="30" value="{ISPTELD}"/></slot></td>
+	<td  valign="top" class="dataLabel"><slot>{MOD.LBL_MOBILE}</slot></td>
+	<td  valign="top"  class="dataField"><slot><input type="text" name="isphandy" onfocus="blur()" size="30" value="{ISPHANDY}"/></slot></td>
+	</tr>
+	<tr>
+	<td  valign="top" class="dataLabel"><slot>{MOD.LBL_BILLING_ADDRESS}</slot></td>
+	<td  valign="top"  class="dataField"><slot>
+		<input type="text" name="hausn" onfocus="blur()" size="70" value="{HAUSN}"/>
+	    <input type="text" name="stras" onfocus="blur()" size="70" value="{STRAS}"/>
+	    <input type="text" name="street2" onfocus="blur()" size="70" value="{STREET2}"/>
+	    {MOD.LBL_CITY}<input type="text" name="ort01" onfocus="blur()" size="20" value="{ORT01}"/> &nbsp; &nbsp;{MOD.LBL_POSTAL_CODE}
+	    <input type="text" name="pstlz" onfocus="blur()" size="20" value="{PSTLZ}"/>
+	</slot></td>
+	<td  valign="top" class="dataLabel">&nbsp;</td>
+	<td  valign="top"  class="dataField">&nbsp;</td>
+	</tr>
+</table>
+</p>
+</form>
+<p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabForm">
+<tr><td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td  class="dataLabel" nowrap><b><slot>{MOD.LBL_ACCOUNT_NAME}</slot></b></td>
+		<td  class="dataField"><slot>&nbsp;&nbsp;<input class="dataField" id="name" name="name" value="" type="text" size="30"></slot></td>
+		<td  class="dataLabel" nowrap><b><slot>{MOD.LBL_ANY_ADDRESS}</slot></h4></td>
+		<td  class="dataField"><slot>&nbsp;&nbsp;<input class="dataField" id="address" name="address" value="" type="text" size="30"></slot></td>
+		<td  class="dataLabel" nowrap><input type="submit" class="button" value="Search" onClick="getSAPAccountDetails();return false;"></td>
+	</tr>
+	</table>
+</td></tr>
+</table>
+<div id="sapaccounts">
+
+</div>
+</p>
+
+<script language="javascript" src="/sfa/modules/SAPAccounts/internal_request.js"></script>
+{JAVASCRIPT}
+
+<!-- END: main -->

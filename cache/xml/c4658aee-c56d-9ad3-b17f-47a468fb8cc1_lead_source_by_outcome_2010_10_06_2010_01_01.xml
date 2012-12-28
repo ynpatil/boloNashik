@@ -1,0 +1,38 @@
+<graphData title="Pipeline total is 0">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="b4c1ff05-3724-d72f-7030-487b57ad33a3" name="ameyad" color="0xFF0000"/>
+          <mapping id="366ff9b3-5c2f-6204-0dfb-4ba21231a99b" name="anubhavs" color="0x00FF00"/>
+          <mapping id="eac83fe3-db3b-2dc7-c64f-4923cd242f65" name="avikm" color="0x0000FF"/>
+          <mapping id="86200b46-cf3b-a20e-b15b-473c0e2eecef" name="geraldc" color="0xFF6600"/>
+          <mapping id="22255f51-7e78-e907-50ae-474a75d5ccc5" name="hiteshb" color="0x42FF8E"/>
+          <mapping id="2748fbde-479e-f9c8-fa91-474a7507564a" name="jayan" color="0x6600FF"/>
+          <mapping id="99cd0067-9369-db69-10ae-4b174e5af185" name="kunalm1" color="0xFFFF00"/>
+          <mapping id="1fef390b-3d16-5378-784f-476771a5e0f8" name="lubnab" color="0x00FFFF"/>
+          <mapping id="c2ae2e93-8d8d-0fc3-d41e-4923cf9e66ae" name="prashantj" color="0xFF00FF"/>
+          <mapping id="e7fcd84a-e33c-ac17-dbb4-4923d1df837d" name="sandeepr" color="0x66FF00"/>
+          <mapping id="8bfa513e-f6ed-fbd1-c384-474a84087693" name="sangeetm" color="0x0066FF"/>
+          <mapping id="e188626b-4c70-d102-f0bc-474a84ae3993" name="saurabhs" color="0xFF0066"/>
+          <mapping id="f02c0fcd-3a3e-d010-47ba-487b5890d264" name="suchits" color="0xCC0000"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2010-10-06 to 2010-01-01<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

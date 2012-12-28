@@ -1,0 +1,43 @@
+<!-- BEGIN: main -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td style="padding-bottom: 2px;">
+<form action="index.php" method="post" name="DetailView" id="form">
+	<input type="hidden" name="module" value="TeamsOS">
+	<input type="hidden" name="record" value="{ID}">
+	<input type="hidden" name="id" value="{ID}">
+	<input type="hidden" name="action">
+	<input type="hidden" name="isDuplicate" value="false">
+	<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+	<input type="hidden" name="return_id" >
+	<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+	<input title="{APP.LBL_EDIT_BUTTON_TITLE}" accessKey="{APP.LBL_EDIT_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='TeamsOS'; this.form.return_action.value='DetailView'; this.form.return_id.value='{Team.ID}'; this.form.action.value='EditView'" type="submit" name="Edit" value="  {APP.LBL_EDIT_BUTTON_LABEL}  ">
+	<input title="{APP.LBL_DUPLICATE_BUTTON_TITLE}" accessKey="{APP.LBL_DUPLICATE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='TeamsOS'; this.form.return_action.value='index'; this.form.isDuplicate.value=true; this.form.action.value='EditView'" type="submit" name="Duplicate" value=" {APP.LBL_DUPLICATE_BUTTON_LABEL} ">
+	<input title="{APP.LBL_DELETE_BUTTON_TITLE}" accessKey="{APP.LBL_DELETE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='TeamsOS'; this.form.return_action.value='ListView'; this.form.action.value='Delete'; return confirm('{APP.NTC_DELETE_CONFIRMATION}')" type="submit" name="Delete" value=" {APP.LBL_DELETE_BUTTON_LABEL} ">
+</form>
+</td>
+<td align="right">{ADMIN_EDIT}</td>
+</tr>
+</table>
+  
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  class="tabDetailView">
+
+<tr>
+<td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="10%" valign="top" class="tabDetailViewDL"><slot> {MOD.LBL_NAME}:<span class="required"></span> </slot></td>
+<td width="40%" valign="top" class="tabDetailViewDF"><slot>{NAME}</slot></td>
+</tr>
+<tr>
+<td width="10%" valign="top" class="tabDetailViewDL"><slot> {MOD.LBL_PRIVATE}:<span class="required"></span> </slot></td>
+<td width="40%" valign="top" class="tabDetailViewDF"><slot><input name='private' tabindex='2' type="checkbox" value="1" {PRIVATE} disabled></slot></td>
+</tr>
+</table>
+</td></tr>
+<p>
+</td></tr></table>
+<!-- END: main -->
+<!-- BEGIN: subpanel -->
+<slot>{SUBPANEL}</slot>
+<!-- END: subpanel -->

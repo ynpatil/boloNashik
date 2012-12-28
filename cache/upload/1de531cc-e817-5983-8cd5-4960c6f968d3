@@ -1,0 +1,10 @@
+[InstallShield Silent]
+Version=v6.00.000
+File=Log File
+[ResponseResult]
+ResultCode=0
+[Application]
+Name=the Synaptics Pointing Device Driver
+Version=Tmp
+Company=Synaptics
+Lang=0009

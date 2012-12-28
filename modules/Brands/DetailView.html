@@ -1,0 +1,109 @@
+<!--
+/*********************************************************************************
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004-2006 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ ********************************************************************************/
+/*********************************************************************************
+ * $Id: DetailView.html,v 1.74 2006/08/27 10:33:08 majed Exp $
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+<td style="padding-bottom: 2px;">
+
+<form action="index.php" method="post" name="DetailView" id="form">
+
+			<input type="hidden" name="module" value="Brands">
+			<input type="hidden" name="record" value="{ID}">
+			<input type="hidden" name="isDuplicate" value=false>
+			<input type="hidden" name="action">
+			<input type="hidden" name="return_module">
+			<input type="hidden" name="return_action">
+			<input type="hidden" name="return_id">
+			<input type="hidden" name="contact_id">
+			<input type="hidden" name="member_id">
+			<input type="hidden" name="opportunity_id">
+			<input type="hidden" name="case_id">
+			<input type="hidden" name="task_id">
+			<input type="hidden" name="meeting_id">
+			<input type="hidden" name="call_id">
+			<input type="hidden" name="email_id">
+			<input type="hidden" name="bug_id">
+			<input type="hidden" name="name" value="{NAME}">
+
+<!-- BEGIN: open_source_dummy_filler -->
+<!-- END: open_source_dummy_filler -->
+
+<input title="{APP.LBL_EDIT_BUTTON_TITLE}" accessKey="{APP.LBL_EDIT_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Brands'; this.form.return_action.value='DetailView'; this.form.return_id.value='{ID}'; this.form.action.value='EditView'" type="submit" name="Edit" value="  {APP.LBL_EDIT_BUTTON_LABEL}  ">
+<!--<input title="{APP.LBL_VIEW_OBJECTIVE_TITLE}" accessKey="{APP.LBL_VIEW_OBJECTIVE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Brands'; this.form.return_action.value='DetailView'; this.form.return_id.value='{ID}'; this.form.module.value='AccountObjective';this.form.action.value='DetailView';" type="submit" name="button" value="{APP.LBL_VIEW_OBJECTIVE_LABEL}" >
+<input title="{APP.LBL_VIEW_MARKET_INFO_TITLE}" accessKey="{APP.LBL_VIEW_MARKET_INFO_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Brands'; this.form.return_action.value='DetailView'; this.form.return_id.value='{ID}'; this.form.module.value='AccountMktInfo';this.form.action.value='DetailView';" type="submit" name="button" value="{APP.LBL_VIEW_MARKET_INFO_LABEL}" >
+<input title="{APP.LBL_VIEW_TG_TITLE}" accessKey="{APP.LBL_VIEW_TG_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Brands'; this.form.return_action.value='DetailView'; this.form.return_id.value='{ID}'; this.form.module.value='AccountTG';this.form.action.value='DetailView';" type="submit" name="button" value="{APP.LBL_VIEW_TG_LABEL}" >-->
+
+		<input title="{APP.LBL_DUPLICATE_BUTTON_TITLE}" accessKey="{APP.LBL_DUPLICATE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Brands'; this.form.return_action.value='index'; this.form.isDuplicate.value=true; this.form.action.value='EditView'" type="submit" name="Duplicate" value=" {APP.LBL_DUPLICATE_BUTTON_LABEL} ">
+		<input title="{APP.LBL_DELETE_BUTTON_TITLE}" accessKey="{APP.LBL_DELETE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Brands'; this.form.return_action.value='ListView'; this.form.action.value='Delete'; return confirm('{APP.NTC_DELETE_CONFIRMATION}')" type="submit" name="Delete" value=" {APP.LBL_DELETE_BUTTON_LABEL} ">
+<input title="{APP.LBL_FAQ_BUTTON_TITLE}" accessKey="{APP.LBL_FAQ_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Brands'; this.form.return_action.value='DetailView'; this.form.return_id.value='{ID}'; this.form.action.value='FaqEditView'" type="submit" name="Edit" value="  {APP.LBL_FAQ_BUTTON_LABEL}  ">
+		{FIND_DUPES_MERGE_BUTTON}
+	</form>
+	</td>
+	<td align="right">{ADMIN_EDIT}</td>
+</tr>
+</table>
+
+	<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0" class="tabDetailView">
+{PAGINATION}
+<tr>
+	<td  valign="top" class="tabDetailViewDL"><span sugar='slot3'>{MOD.LBL_VARIANT_BRAND_NAME}</span sugar='slot'></td>
+	<td  valign="top"  class="tabDetailViewDF"><span sugar='slot3b'>{NAME}&nbsp;</span sugar='slot'></td>
+	<td  valign="top" class="tabDetailViewDL"><span sugar='slot3'>{MOD.LBL_PRICE}</span sugar='slot'></td>
+	<td  valign="top"  class="tabDetailViewDF"><span sugar='slot3b'>{PRICE}&nbsp;</span sugar='slot'></td>
+	</tr><tr>
+	<td  valign="top" class="tabDetailViewDL"><span sugar='slot7'>{MOD.LBL_PRIMARY_BRAND}</span sugar='slot'></td>
+	<td  valign="top"  class="tabDetailViewDF"><span sugar='slot7b'><a href="index.php?module=Brands&action=DetailView&record={PARENT_ID}">{PARENT_NAME}</a>&nbsp;</span sugar='slot'></td>
+	<td class="tabDetailViewDF" colspan="2"><span sugar='slot18b'>&nbsp;</span sugar='slot'></td>
+	</tr>
+	<tr>
+
+		<td  valign="top" class="tabDetailViewDL"><span sugar='slot7'>{MOD.LBL_PRIMARY_ACCOUNT}</span sugar='slot'></td>
+		<td  valign="top"  class="tabDetailViewDF"><span sugar='slot7b'><a href="index.php?module=Accounts&action=DetailView&record={ACCOUNT_ID}">{ACCOUNT_NAME}</a>&nbsp;</span sugar='slot'></td>
+		<td class="tabDetailViewDF" colspan="2"><span sugar='slot18b'>&nbsp;</span sugar='slot'></td>
+	</tr>
+	<tr>
+	<td  valign="top" class="tabDetailViewDL"><span sugar='slot20'>{APP.LBL_ASSIGNED_TO}</span sugar='slot'></td>
+	<td  valign="top" class="tabDetailViewDF"><span sugar='slot20b'>{ASSIGNED_TO}&nbsp;</span sugar='slot'></td>
+	<td  class="tabDetailViewDL"><span sugar='slot21'>{APP.LBL_DATE_ENTERED}</span sugar='slot'></td>
+	<td  class="tabDetailViewDF"><span sugar='slot21b'>{DATE_ENTERED} {APP.LBL_BY} {CREATED_BY}&nbsp;</span sugar='slot'></td>
+	</tr>
+        <!--<tr>
+	<td  valign="top" valign="top" class="tabDetailViewDL"><span sugar='slot24'>{MOD.LBL_BRAND_POSITIONING}</span sugar='slot'></td>
+	<td colspan="3" class="tabDetailViewDF"><span sugar='slot24b'>{BRAND_POS}&nbsp;</span sugar='slot'></td>
+	</tr>
+	<tr>
+	<td  valign="top" valign="top" class="tabDetailViewDL"><span sugar='slot24'>{MOD.LBL_PROD_HIER}</span sugar='slot'></td>
+	<td colspan="3" class="tabDetailViewDF"><span sugar='slot24b'>{PROD_HIER_DESC}&nbsp;</span sugar='slot'></td>
+	</tr>-->
+</table>
+
+<!-- END: main -->
+<!-- BEGIN: subpanel -->
+<span sugar='slot25'>{SUBPANEL}</span sugar='slot'>
+<!-- END: subpanel -->

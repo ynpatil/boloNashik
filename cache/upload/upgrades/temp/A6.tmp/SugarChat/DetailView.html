@@ -1,0 +1,181 @@
+<!--
+/*****************************************************************************
+ * The contents of this file are subject to the RECIPROCAL PUBLIC LICENSE
+ * Version 1.1 ("License"); You may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ * http://opensource.org/licenses/rpl.php. Software distributed under the
+ * License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND,
+ * either express or implied.
+ *
+ * You may:
+ * a) Use and distribute this code exactly as you received without payment or
+ *    a royalty or other fee.
+ * b) Create extensions for this code, provided that you make the extensions
+ *    publicly available and document your modifications clearly.
+ * c) Charge for a fee for warranty or support or for accepting liability
+ *    obligations for your customers.
+ *
+ * You may NOT:
+ * a) Charge for the use of the original code or extensions, including in
+ *    electronic distribution models, such as ASP (Application Service
+ *    Provider).
+ * b) Charge for the original source code or your extensions other than a
+ *    nominal fee to cover distribution costs where such distribution
+ *    involves PHYSICAL media.
+ * c) Modify or delete any pre-existing copyright notices, change notices,
+ *    or License text in the Licensed Software
+ * d) Assert any patent claims against the Licensor or Contributors, or
+ *    which would in any way restrict the ability of any third party to use the
+ *    Licensed Software.
+ *
+ * You must:
+ * a) Document any modifications you make to this code including the nature of
+ *    the change, the authors of the change, and the date of the change.
+ * b) Make the source code for any extensions you deploy available via an
+ *    Electronic Distribution Mechanism such as FTP or HTTP download.
+ * c) Notify the licensor of the availability of source code to your extensions
+ *    and include instructions on how to acquire the source code and updates.
+ * d) Grant Licensor a world-wide, non-exclusive, royalty-free license to use,
+ *    reproduce, perform, modify, sublicense, and distribute your extensions.
+ *
+ * The Original Code is: CommuniCore
+ *                       Olavo Farias
+ *                       2006-04-7 olavo.farias@gmail.com
+ *
+ * The Initial Developer of the Original Code is CommuniCore.
+ * Portions created by CommuniCore are Copyright (C) 2005 CommuniCore Ltda
+ * All Rights Reserved.
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+<script type="text/javascript">
+function prep_edit(the_form){
+ the_form.return_module.value='SugarChat';
+ the_form.return_action.value='DetailView';
+ the_form.return_id.value='{id}';
+ the_form.action.value='EditView';
+}
+
+function prep_duplicate(the_form){
+ the_form.return_module.value='SugarChat';
+ the_form.return_action.value='index';
+ the_form.isDuplicate.value=true;
+ the_form.action.value='EditView';
+}
+
+function prep_delete(the_form){
+ the_form.return_module.value='SugarChat';
+ the_form.return_action.value='ListView';
+ the_form.action.value='Delete';
+}
+</script>
+<form action="index.php" method="post"
+ name="DetailView" id="DetailView">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td style="padding-bottom: 2px;">
+<input type="hidden" name="module"        value="SugarChat" />
+<input type="hidden" name="record"        value="{id}" />
+<input type="hidden" name="isDuplicate"   value="false" />
+<input type="hidden" name="action" />
+<input type="hidden" name="return_module" value="SugarChat" />
+<input type="hidden" name="return_action" value="DetailView" />
+<input type="hidden" name="contact_id" />
+<input type="hidden" name="account_id" />
+<input type="hidden" name="simple_id"     value="{id}" />
+<input type="hidden" name="return_id"     value="{id}" />
+
+<input title="{APP.LBL_EDIT_BUTTON_TITLE}"
+ accessKey="{APP.LBL_EDIT_BUTTON_KEY}" 
+ class    ="button" 
+ type     ="submit"
+ name     ="Edit" 
+ value    ="  {APP.LBL_EDIT_BUTTON}  "
+ onclick  ="prep_edit(this.form);"
+/>
+
+<input title="{APP.LBL_DUPLICATE_BUTTON_TITLE}"
+ accessKey="{APP.LBL_DUPLICATE_BUTTON_KEY}" 
+ class    ="button" 
+ type     ="submit"
+ name     ="Duplicate" 
+ value    ="{APP.LBL_DUPLICATE_BUTTON}"
+ onclick  ="prep_duplicate(this.form);"
+/>
+
+<input title="{APP.LBL_DELETE_BUTTON_TITLE}"
+ accessKey="{APP.LBL_DELETE_BUTTON_KEY}" 
+ class   ="button" 
+ type    ="submit"
+ name    ="Delete" 
+ value   ="  {APP.LBL_DELETE_BUTTON} "
+ onclick ="prep_delete(this.form); return confirm('{APP.NTC_DELETE_CONFIRMATION}');"
+/></td>
+
+<td align='right'>{ADMIN_EDIT}</td>
+</tr>
+
+</table>
+</form>
+
+<b style="color: red">Reset this chat with edit!</b><br />
+<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0" class="tabDetailView">
+{PAGINATION}
+ <tr>
+  <td>
+   <table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0" class="tabDetailView">
+    <tr>
+     <td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_NAME}</slot></td>
+     <td width="35%" class="tabDetailViewDF"><slot>{NAME}&nbsp;</slot></td>
+     <td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_ASSIGNED_USER_ID}</slot></td>
+     <td width="35%" class="tabDetailViewDF"><slot>{assigned_user_name}&nbsp;</slot></td>
+    </tr>
+
+    <tr>
+     <td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_DESCRIPTION}</slot></td>
+     <td width="35%" class="tabDetailViewDF"><slot>{DESCRIPTION}&nbsp;</slot></td>
+     <td width="15%" class="tabDetailViewDL"><slot>&nbsp</slot></td>
+     <td width="35%" class="tabDetailViewDF"><slot>&nbsp;</slot></td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+<br />
+<div style="border: 1px #000000 solid; height: 200px; padding: 5px; overflow: auto;">
+{CHATSTRING}
+</div>
+<form action="" method="post">
+<table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-left: 1px #000000 solid; border-right: 1px #000000 solid; border-bottom: 1px #000000 solid;">
+  <tr>
+    <td><label>{MOD.LBL_CHATMESSAGE}:</label>
+
+<textarea name="message" type="text" rows="4" cols="100" style="width: 100%;"></textarea>
+
+    </td>
+    <td style="border-left: 1px #000000 solid;"><input type="hidden" name="pakolliset" value="message" />
+<div style="float: left;"><label>{MOD.LBL_CHATFONTCOLOR}:</label> </div>
+<input name="color" type="radio" value="transparent" style="float: left;" /> <div style="border: #transparent 1px solid; background-color: #FFFFFF; height: 13px; width: 15px; float: left; border: 1px #000000 solid;"></div>
+<input name="color" type="radio" value="#CCCCCC" style="float: left;" /> <div style="border: #FFFFFF 1px solid; background-color: #CCCCCC; height: 13px; width: 15px; float: left; border: 1px #000000 solid;"></div>
+<input name="color" type="radio" value="#FF0000" style="float: left;" /> <div style="border: #FFFFFF 1px solid; background-color: #FF0000; height: 13px; width: 15px; float: left; border: 1px #000000 solid;"></div>
+<input name="color" type="radio" value="#00FF00" style="float: left;" /> <div style="border: #FFFFFF 1px solid; background-color: #00FF00; height: 13px; width: 15px; float: left; border: 1px #000000 solid;"></div>
+<input name="color" type="radio" value="#0000FF" style="float: left;" /> <div style="border: #FFFFFF 1px solid; background-color: #0000FF; height: 13px; width: 15px; float: left; border: 1px #000000 solid;"></div>
+<br />
+<br />
+<label>{MOD.LBL_CHATFONTSTYLE}:</label>
+<input name="weight" type="radio" value="normal" /> <label>NORMAL</label>
+<input name="weight" type="radio" value="code" /> <label>CODE</label>
+<input name="weight" type="radio" value="b" /> <label>B</label>
+<input name="weight" type="radio" value="i" /> <label>I</label></td>
+  </tr>
+</table>
+<br />
+<input name="submit" type="submit" value="{MOD.LBL_CHATSUBMIT}!" />
+</form>
+
+<!-- BEGIN: open_source -->
+<!-- END: open_source -->
+<!-- END: main -->
+<!-- BEGIN: subpanel -->
+<slot>{SUBPANEL}</slot>
+<!-- END: subpanel -->

@@ -1,0 +1,31 @@
+<graphData title="Pipeline total is 0">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="523b125c-e57a-5a3f-c9ee-46ade5d24cc8" name="AmitavaB" color="0xFF0000"/>
+          <mapping id="6ec65fd5-e4da-dd05-c6e1-46ade5b25948" name="GSKrishna" color="0x00FF00"/>
+          <mapping id="9236b89d-e13f-bc24-2bf5-46ade56e2f5a" name="JitendraA" color="0x0000FF"/>
+          <mapping id="980c7908-47d3-c87c-bb28-46ade5c9b3a7" name="PurbashaR" color="0xFF6600"/>
+          <mapping id="23f12cc3-1de4-9ac4-cfe2-46ade675ebde" name="ShraddhaD" color="0x42FF8E"/>
+          <mapping id="138bee1e-d6c3-fce5-c2a6-469dcbc39465" name="nawabR" color="0x6600FF"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2007-08-01 to 2010-01-01<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0xffffff"  docBg1="0xffffff"  docBg2="0xffffff"  xText="0x33485c"  yText="0x33485c"  title="0x333333"  misc="0x999999"  altBorder="0xffffff"  altBg="0xffffff"  altText="0x666666"  graphBorder="0xcccccc"  graphBg1="0xf6f6f6"  graphBg2="0xf6f6f6"  graphLines="0xcccccc"  graphText="0x333333"  graphTextShadow="0xf9f9f9"  barBorder="0xeeeeee"  barBorderHilite="0x333333"  legendBorder="0xffffff"  legendBg1="0xffffff"  legendBg2="0xffffff"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0xcccccc"  scrollBarBorder="0xeeeeee"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0xcccccc"  />
+</graphData>

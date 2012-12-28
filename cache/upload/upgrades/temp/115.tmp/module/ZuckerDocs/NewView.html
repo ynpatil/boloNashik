@@ -1,0 +1,47 @@
+<!-- BEGIN: main -->
+<form name="NewView" method="POST" action="index.php">
+	<input type="hidden" name="module" value="ZuckerDocs">
+	<input type="hidden" name="action">
+	<input type="hidden" name="record">
+	<input type="hidden" name="parent_module" value="{PARENT_MODULE}">
+	<input type="hidden" name="parent_id" value="{PARENT_ID}">
+	<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+	<input type="hidden" name="return_id" value="{RETURN_ID}">
+	<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td style="padding-bottom: 2px;">
+			<input class="button" onclick="this.form.action.value='DocSave';" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " > 
+			<input class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+		</td>
+	</tr>
+</table>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tabForm">
+	<tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_TEMPLATE_NAME}</slot></td>
+		<td width="*" class="tabDetailViewDF"><slot><select name='template' onChange="this.form.action.value='NewView'; this.form.submit();">{TEMPLATE_OPTIONS}</select></slot></td>
+	</tr>
+</table>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tabForm">
+	<tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_FILE}</slot></td>
+		<td width="*" class="tabDetailViewDF"><slot><input type="text" name='filename' value="{FILENAME}"/></slot></td>
+	</tr><tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_DESCRIPTION}</slot></td>
+		<td width="*" class="tabDetailViewDF"><slot><textarea id="description" name='description' cols="35" rows="5">{DESCRIPTION}</textarea></slot></td>
+	</tr><tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_LIST_PARENT}</slot></td>
+		<td colspan="3" class="tabDetailViewDF"><slot><a href="{PARENT_LINK}" class="tabDetailViewDFLink">{PARENT_NAME}</a></slot></td>
+	</tr><tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_LIST_CATNAME}</slot></td>
+		<td colspan="3" class="tabDetailViewDF"><slot><select name='cat_name'>{CATNAME_OPTIONS}</select></slot></td>
+	</tr><tr>
+		<td colspan="2"><slot><textarea id="contents" name='contents' cols="150" rows="35">{CONTENTS}</textarea></slot></td>
+	</tr>
+</table>
+</form>
+{JAVASCRIPT}
+<!-- END: main -->

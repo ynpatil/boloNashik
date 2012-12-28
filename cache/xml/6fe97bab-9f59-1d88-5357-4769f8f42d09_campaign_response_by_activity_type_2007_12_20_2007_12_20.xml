@@ -1,0 +1,33 @@
+<graphData title="Campaign Response by Recipient Activity">
+     <yData defaultAltText="Rollover a bar to view details.">
+          <dataRow title="" endLabel="">
+          </dataRow>
+          <dataRow title="Message Sent/Attempted" endLabel="t">
+          </dataRow>
+          <dataRow title="Bounced Messages,Other" endLabel="s">
+          </dataRow>
+          <dataRow title="Bounced Messages,Invalid Email" endLabel="i">
+          </dataRow>
+          <dataRow title="Click-thru Link" endLabel="l">
+          </dataRow>
+          <dataRow title="Viewed Message" endLabel="v">
+          </dataRow>
+          <dataRow title="Opted Out" endLabel="r">
+          </dataRow>
+          <dataRow title="Leads Created" endLabel="l">
+          </dataRow>
+          <dataRow title="Contacts Created" endLabel="c">
+          </dataRow>
+     </yData>
+     <xData min="0" max="v" length="10" prefix="" suffix=""/>
+     <colorLegend status="on">
+          <mapping id="Contacts" name="Contacts" color="0xFF0000"/>
+          <mapping id="Users" name="Users" color="0x00FF00"/>
+          <mapping id="Prospects" name="Targets" color="0x0000FF"/>
+          <mapping id="Leads" name="Leads" color="0xFF6600"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[ ]]>
+     </graphInfo>
+     <chartColors  docBorder="0x777777"  docBg1="0xfefefe"  docBg2="0xe1e1e1"  xText="0x666666"  yText="0x666666"  title="0x555555"  misc="0x666666"  altBorder="0x666666"  altBg="0xFFF9B7"  altText="0x666666"  graphBorder="0x444444"  graphBg1="0xCCCCCC"  graphBg2="0xefefef"  graphLines="0xEEEEEE"  graphText="0x222222"  graphTextShadow="0xFFFFFF"  barBorder="0x666666"  barBorderHilite="0xFFFFFF"  legendBorder="0x777777"  legendBg1="0xCCDFFF"  legendBg2="0xE0ECFF"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0x999999"  scrollBarBorder="0x777777"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0x777777"  />
+</graphData>

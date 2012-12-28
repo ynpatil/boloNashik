@@ -1,0 +1,26 @@
+<graphData title="Pipeline total is 0,00">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="">
+     </dataRow>
+     <dataRow title="Approach" endLabel="">
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="">
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="0" length="4" kDelim="," prefix="" suffix=""/>
+     <colorLegend status="on">
+          <mapping id="6fcc4099-e86a-8dc9-486f-478b7b64fde7" name="vishwamp" color="0xFF0000"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2008-01-18 to 2010-01-01<BR/>Opportunity count in 1 Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0x599ee1"  docBg1="0xe4ecf4"  docBg2="0xFFFFFF"  xText="0x444444"  yText="0x444444"  title="0x2c6baf"  misc="0x666666"  altBorder="0x9cd0ff"  altBg="0xFFFFFF"  altText="0x0062A7"  graphBorder="0x4d88c6"  graphBg1="0x9cd0ff"  graphBg2="0xffffff"  graphLines="0xEEEEEE"  graphText="0x003860"  graphTextShadow="0xFFFFFF"  barBorder="0x666666"  barBorderHilite="0xFFFFFF"  legendBorder="0x9cd0ff"  legendBg1="0xFFFFFF"  legendBg2="0xe4ecf4"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0x999999"  scrollBarBorder="0x777777"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0x777777"  />
+</graphData>

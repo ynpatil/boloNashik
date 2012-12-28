@@ -1,0 +1,11 @@
+rm -rf ./modules/Feedback/metadata/.svn
+rm -rf ./modules/Feedback/.svn
+rm -rf ./modules/Feedback/language/.svn
+rm -rf ./modules/.svn
+rm -rf ./modules/Calendar/templates/.svn
+rm -rf ./modules/Calendar/language/.svn
+rm -rf ./modules/ComplianceMaster/metadata/.svn
+rm -rf ./modules/ComplianceMaster/.svn
+rm -rf ./modules/ComplianceMaster/language/.svn
+rm -rf ./modules/ActivityReport/.svn
+rm -rf ./modules/ActivityReport/language/.svn

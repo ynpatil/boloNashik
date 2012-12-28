@@ -1,0 +1,152 @@
+<!--
+/*
+ * The contents of this file are subject to the SugarCRM Public License Version
+ * 1.1.3 ("License"); You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * All copies of the Covered Code must include on each user interface screen:
+ *    (i) the "Powered by SugarCRM" logo and
+ *    (ii) the SugarCRM copyright notice
+ * in the same form as they appear in the distribution.  See full license for
+ * requirements.
+ *
+ * The Original Code is: SugarCRM Open Source
+ * The Initial Developer of the Original Code is SugarCRM, Inc.
+ * Portions created by SugarCRM are Copyright (C) 2004-2006 SugarCRM, Inc.;
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________.
+ */
+-->
+<!-- $Id: DetailView.html,v 1.31 2006/08/27 10:33:09 majed Exp $ -->
+<!-- BEGIN: main -->
+
+<form action="index.php" method="post" name="DetailView" id="DetailView">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td style="padding-bottom: 2px;">
+<input type="hidden" name="module" value="AccountTG" />
+<input type="hidden" name="record" value="{id}" />
+<input type="hidden" name="isDuplicate" value="false" />
+<input type="hidden" name="action" />
+<input type="hidden" name="return_module" value="{parent_type}" />
+<input type="hidden" name="return_action" value="DetailView" />
+<input type="hidden" name="return_id" value="{id}" />
+<input type="hidden" name="name" value="{name}" />
+
+<input title="{APP.LBL_EDIT_BUTTON_TITLE}" accessKey="{APP.LBL_EDIT_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='{parent_type}'; this.form.return_action.value='DetailView'; this.form.return_id.value='{id}'; this.form.action.value='EditView'" type="submit" name="Edit" value="  {APP.LBL_EDIT_BUTTON_LABEL}  ">
+<!--		<input title="{APP.LBL_DUPLICATE_BUTTON_TITLE}" accessKey="{APP.LBL_DUPLICATE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Accountdate/time         : 2006-11-02 21:23
+computer name     : JAIGANESH
+user name         : jaiganesh.girinathan
+operating system  : Windows XP Service Pack 2
+free disk space   : 17,17 GB
+executable        : wampserver.exe
+exec. date/time   : 2004-06-27 20:57
+version           : 1.4.3.25
+exception message : Aestan Tray Menu seems to be frozen.
+
+main thread ($E4C):
+$7C90EB94 ntdll.dll                 KiFastSystemCallRet
+$77D49416 user32.dll                WaitMessage
+$00477D66 wampserver.exe Forms      TApplication.Idle
+$004773DB wampserver.exe Forms      TApplication.HandleMessage
+$004775EE wampserver.exe Forms      TApplication.Run
+$004DD6A1 wampserver.exe AeTrayMenu EntryPoint
+
+modules:
+$00400000 wampserver.exe 1.4.3.25        c:\ResponCRM
+$10000000 ASAPHook.dll   1.1.0.1         C:\WINDOWS\system32
+$5AD70000 uxtheme.dll    6.0.2900.2180   C:\WINDOWS\system32
+$629C0000 LPK.DLL        5.1.2600.2180   C:\WINDOWS\system32
+$63000000 SynTPFcs.dll   7.13.0.1        C:\WINDOWS\system32
+$73000000 winspool.drv   5.1.2600.2180   C:\WINDOWS\system32
+$74720000 MSCTF.dll      5.1.2600.2180   C:\WINDOWS\system32
+$74D30000 oledlg.dll     5.1.2600.0      C:\WINDOWS\system32
+$74D90000 USP10.dll      1.420.2600.2180 C:\WINDOWS\system32
+$74E30000 RICHED20.DLL   5.30.23.1221    C:\WINDOWS\system32
+$755C0000 msctfime.ime   5.1.2600.2180   C:\WINDOWS\system32
+$76390000 IMM32.DLL      5.1.2600.2180   C:\WINDOWS\system32
+$763B0000 comdlg32.dll   6.0.2900.2180   C:\WINDOWS\system32
+$77120000 oleaut32.dll   5.1.2600.2180   C:\WINDOWS\system32
+$773D0000 comctl32.dll   6.0.2900.2982   C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2982_x-ww_ac3f9c03
+$774E0000 ole32.dll      5.1.2600.2726   C:\WINDOWS\system32
+$77C00000 version.dll    5.1.2600.2180   C:\WINDOWS\system32
+$77C10000 msvcrt.dll     7.0.2600.2180   C:\WINDOWS\system32
+$77D40000 user32.dll     5.1.2600.2622   C:\WINDOWS\system32
+$77DD0000 advapi32.dll   5.1.2600.2180   C:\WINDOWS\system32
+$77E70000 RPCRT4.dll     5.1.2600.2180   C:\WINDOWS\system32
+$77F10000 GDI32.dll      5.1.2600.2818   C:\WINDOWS\system32
+$77F60000 SHLWAPI.dll    6.0.2900.2937   C:\WINDOWS\system32
+$77FE0000 Secur32.dll    5.1.2600.2180   C:\WINDOWS\system32
+$7C800000 kernel32.dll   5.1.2600.2945   C:\WINDOWS\system32
+$7C900000 ntdll.dll      5.1.2600.2180   C:\WINDOWS\system32
+$7C9C0000 shell32.dll    6.0.2900.2951   C:\WINDOWS\system32'; this.form.return_action.value='index'; this.form.isDuplicate.value=true; this.form.action.value='EditView'" type="submit" name="Duplicate" value=" {APP.LBL_DUPLICATE_BUTTON_LABEL} "> -->
+		<input title="{APP.LBL_DELETE_BUTTON_TITLE}" accessKey="{APP.LBL_DELETE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='{parent_type}'; this.form.return_action.value='DetailView'; this.form.action.value='Delete'; return confirm('{APP.NTC_DELETE_CONFIRMATION}')" type="submit" name="Delete" value=" {APP.LBL_DELETE_BUTTON_LABEL} ">
+		<input title="{APP.LBL_BACK_BUTTON_TITLE}" accessKey="{APP.LBL_BACK_BUTTON_KEY}" class="button" onclick="this.form.module.value='{parent_type}';this.form.action.value='DetailView';" type="submit" name="Back" value=" {APP.LBL_BACK_BUTTON_LABEL} ">
+		{FIND_DUPES_MERGE_BUTTON}
+</td>
+
+<td align='right'>{ADMIN_EDIT}</td>
+</tr>
+
+</table>
+</form>
+
+<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0"
+	class="tabDetailView">
+{PAGINATION}
+<tr>
+	<td width="100%" valign="top" class="tabDetailViewDL">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><span sugar='slot1'>{APP.LBL_MARKETING_OBJECTIVE}</span sugar='slot'></td>
+			</tr>
+			<tr>
+				<td valign="top"  class="tabDetailViewDF"><span sugar='slot1b'>{mkt_obj}</span sugar='slot'></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td width="100%" valign="top" class="tabDetailViewDL">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><span sugar='slot2'>{APP.LBL_COMMUNICATION_OBJECTIVE}</span sugar='slot'></td>
+			</tr>
+			<tr>
+				<td valign="top"  class="tabDetailViewDF"><span sugar='slot2b'>{comm_obj}</span sugar='slot'></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td width="100%" valign="top" class="tabDetailViewDL">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><span sugar='slot3'>{APP.LBL_MARKETING_PRIORITY}</span sugar='slot'></td>
+			</tr>
+			<tr>
+				<td valign="top"  class="tabDetailViewDF"><span sugar='slot3b'>{mkt_pri}</span sugar='slot'></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td width="100%" valign="top" class="tabDetailViewDL">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><span sugar='slot4'>{APP.LBL_LATEST_HAPPEN}</span sugar='slot'></td>
+			</tr>
+			<tr>
+				<td valign="top"  class="tabDetailViewDF"><span sugar='slot4b'>{latest_happen}</span sugar='slot'></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<!-- END: main -->

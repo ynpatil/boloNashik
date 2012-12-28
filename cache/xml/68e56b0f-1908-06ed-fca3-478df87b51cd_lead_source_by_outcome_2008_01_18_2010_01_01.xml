@@ -1,0 +1,46 @@
+<graphData title="Pipeline total is 6">
+     <yData defaultAltText="Rollover a bar for details.">
+     <dataRow title="Suspecting" endLabel="">
+     </dataRow>
+     <dataRow title="Prospecting" endLabel="1">
+          <bar id="1eef2aa0-6756-1c3d-9c07-478b83be9f13" totalSize="1" altText="tonyz: 1 opportunities  where sales stage is Prospecting" url="index.php?module=Opportunities&action=index&assigned_user_id[]=1eef2aa0-6756-1c3d-9c07-478b83be9f13&sales_stage=Prospecting&date_start=2008-01-18&date_closed=2010-01-01&query=true&searchFormTab=advanced_search"/>
+     </dataRow>
+     <dataRow title="Approach" endLabel="3">
+          <bar id="95ab74e7-6bb4-a854-9668-478b81f1d887" totalSize="1" altText="meghnaa: 1 opportunities  where sales stage is Approach" url="index.php?module=Opportunities&action=index&assigned_user_id[]=95ab74e7-6bb4-a854-9668-478b81f1d887&sales_stage=Approach&date_start=2008-01-18&date_closed=2010-01-01&query=true&searchFormTab=advanced_search"/>
+          <bar id="c260341e-0299-f9f1-eda0-478c7acc6a3d" totalSize="1" altText="shitalr: 1 opportunities  where sales stage is Approach" url="index.php?module=Opportunities&action=index&assigned_user_id[]=c260341e-0299-f9f1-eda0-478c7acc6a3d&sales_stage=Approach&date_start=2008-01-18&date_closed=2010-01-01&query=true&searchFormTab=advanced_search"/>
+          <bar id="2d2d059c-e07e-7f61-e74c-478b6d78790e" totalSize="1" altText="udayanb: 1 opportunities  where sales stage is Approach" url="index.php?module=Opportunities&action=index&assigned_user_id[]=2d2d059c-e07e-7f61-e74c-478b6d78790e&sales_stage=Approach&date_start=2008-01-18&date_closed=2010-01-01&query=true&searchFormTab=advanced_search"/>
+     </dataRow>
+     <dataRow title="Negotiation/Review" endLabel="1">
+          <bar id="d3a6569c-a95a-b4f1-c7c7-478b6d17cf5b" totalSize="1" altText="ranjeetav: 1 opportunities  where sales stage is Negotiation/Review" url="index.php?module=Opportunities&action=index&assigned_user_id[]=d3a6569c-a95a-b4f1-c7c7-478b6d17cf5b&sales_stage=Negotiation%2FReview&date_start=2008-01-18&date_closed=2010-01-01&query=true&searchFormTab=advanced_search"/>
+     </dataRow>
+     <dataRow title="Closed Won" endLabel="1">
+          <bar id="5c8f2d71-32f3-4fd6-9384-478c726066de" totalSize="1" altText="elizabethm: 1 opportunities  where sales stage is Closed Won" url="index.php?module=Opportunities&action=index&assigned_user_id[]=5c8f2d71-32f3-4fd6-9384-478c726066de&sales_stage=Closed+Won&date_start=2008-01-18&date_closed=2010-01-01&query=true&searchFormTab=advanced_search"/>
+     </dataRow>
+     <dataRow title="Closed Lost" endLabel="">
+     </dataRow>
+     <dataRow title="Order" endLabel="">
+     </dataRow>
+     </yData>
+     <xData min="0" max="3" length="10" prefix="" suffix="" kDelim="," />
+     <colorLegend status="on">
+          <mapping id="58f92f03-c095-2338-e088-478b5d243be1" name="animeshb" color="0xFF0000"/>
+          <mapping id="ca1ee784-fe17-8410-ed47-478b82f6a693" name="arunr" color="0x00FF00"/>
+          <mapping id="dae42229-7f36-77c1-05b1-478b64e6965d" name="bhargavp" color="0x0000FF"/>
+          <mapping id="afaf773e-4b69-8e72-ca62-478b6595b4b4" name="bhaveshs" color="0xFF6600"/>
+          <mapping id="da923536-a6ea-494e-fa21-478b83e22d90" name="deveshk" color="0x42FF8E"/>
+          <mapping id="1a232a7b-5c7d-abb8-1521-478b82f77c95" name="divya" color="0x6600FF"/>
+          <mapping id="5c8f2d71-32f3-4fd6-9384-478c726066de" name="elizabethm" color="0xFFFF00"/>
+          <mapping id="c6818298-78f3-67dd-e857-478b62af0039" name="madhukarp" color="0x00FFFF"/>
+          <mapping id="95ab74e7-6bb4-a854-9668-478b81f1d887" name="meghnaa" color="0xFF00FF"/>
+          <mapping id="d4308302-6498-d7bd-ce60-478b71127134" name="pinkys" color="0x66FF00"/>
+          <mapping id="37a92bb8-63d4-7990-01ac-478c72f7cbee" name="praveeng" color="0x0066FF"/>
+          <mapping id="d3a6569c-a95a-b4f1-c7c7-478b6d17cf5b" name="ranjeetav" color="0xFF0066"/>
+          <mapping id="c260341e-0299-f9f1-eda0-478c7acc6a3d" name="shitalr" color="0xCC0000"/>
+          <mapping id="1eef2aa0-6756-1c3d-9c07-478b83be9f13" name="tonyz" color="0x00CC00"/>
+          <mapping id="2d2d059c-e07e-7f61-e74c-478b6d78790e" name="udayanb" color="0x0000CC"/>
+     </colorLegend>
+     <graphInfo>
+          <![CDATA[Date range is 2008-01-18 to 2010-01-01<BR/>Opportunity count in 1Unit]]>
+     </graphInfo>
+     <chartColors  docBorder="0x777777"  docBg1="0xfefefe"  docBg2="0xe1e1e1"  xText="0x666666"  yText="0x666666"  title="0x555555"  misc="0x666666"  altBorder="0x666666"  altBg="0xFFF9B7"  altText="0x666666"  graphBorder="0x444444"  graphBg1="0xCCCCCC"  graphBg2="0xefefef"  graphLines="0xEEEEEE"  graphText="0x222222"  graphTextShadow="0xFFFFFF"  barBorder="0x666666"  barBorderHilite="0xFFFFFF"  legendBorder="0x777777"  legendBg1="0xCCDFFF"  legendBg2="0xE0ECFF"  legendText="0x444444"  legendColorKeyBorder="0x777777"  scrollBar="0x999999"  scrollBarBorder="0x777777"  scrollBarTrack="0xeeeeee"  scrollBarTrackBorder="0x777777"  />
+</graphData>

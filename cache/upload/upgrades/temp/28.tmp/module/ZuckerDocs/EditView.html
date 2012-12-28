@@ -1,0 +1,49 @@
+<!-- BEGIN: main -->
+<form name="EditView" method="POST" action="index.php">
+	<input type="hidden" name="module" value="ZuckerDocs">
+	<input type="hidden" name="record" value="{ID}">
+	<input type="hidden" name="action">
+	<input type="hidden" name="parent_module" value="{PARENT_MODULE}">
+	<input type="hidden" name="parent_id" value="{PARENT_ID}">
+	<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+	<input type="hidden" name="return_id" value="{RETURN_ID}">
+	<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td style="padding-bottom: 2px;"><input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="this.form.action.value='DocSave'; return verify_doc_data(this.form);" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " > <input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  "></td>
+		<td align="right" nowrap><span class="required">{APP.LBL_REQUIRED_SYMBOL}</span> {APP.NTC_REQUIRED}</td>
+	</tr>
+</table>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tabForm">
+	<tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_NAME} <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot><input name='name' size='35' maxlength='50' type="text" value="{NAME}"></slot></td>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_FILE}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot>{FILENAME}</slot></td>
+	</tr><tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_MODIFIED}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot>{MODIFIED}</slot></td>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_STATUS}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot>{STATUS} - {VERSION}</slot></td>
+	</tr><tr>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_PARENT}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot><a href="{PARENT_LINK}" class="tabDetailViewDFLink">{PARENT_NAME}</a></slot></td>
+		<td width="15%" class="tabDetailViewDL"><slot>{MOD.LBL_LIST_CATNAME}</slot></td>
+		<td width="35%" class="tabDetailViewDF"><slot><select name='cat_name'>{CATNAME_OPTIONS}</select></slot></td>
+	</tr><tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_LIST_DESCRIPTION}</slot></td>
+		<td colspan="3" class="tabDetailViewDF"><slot><textarea name='description' cols="35" rows="5">{DESCRIPTION}</textarea></slot></td>
+	</tr>
+	
+	<!-- BEGIN: ktlink -->	
+	<tr>
+		<td class="tabDetailViewDL"><slot>{MOD.LBL_LIST_URL}</slot></td>
+		<td colspan="3" class="tabDetailViewDF"><slot><a href="{URL}" target="dms">{MOD.DMS_LINK_TEXT}</a></slot></td>
+	</tr>
+	<!-- END: ktlink -->		
+</table>
+</form>
+{JAVASCRIPT}
+<!-- END: main -->
